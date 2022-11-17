@@ -25,7 +25,7 @@ const Navbar = (props: Props) => {
         <ul className="flex">
           <li className="mr-4">Home</li>
           <li className="mr-4">About</li>
-          <li className="mr-4">Projects</li>
+          <li className="mr-4">Work</li>
           <li className="mr-4">Contact</li>
         </ul>
       </div>
@@ -41,13 +41,13 @@ const Navbar = (props: Props) => {
             : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center"
         }
       >
-        <li>Home</li>
-        <li>About</li>
-        <li>Work</li>
-        <li>Contact</li>
+        <li className="py-2 text-xl">Home</li>
+        <li className="py-2 text-xl">About</li>
+        <li className="py-2 text-xl">Work</li>
+        <li className="py-2 text-xl">Contact</li>
 
         {/* social media icons */}
-        <div>
+        <div className="py-2">
           <ul className="flex">
             <li>
               <a href="/">
