@@ -35,16 +35,15 @@ const Slider = () => {
   const slideLeft = () => {
     // setCurrent(current === 0 ? length - 1 : current - 1);
     let slide = document.getElementById("slider");
-    slide.scrollIntoView({ behavior: "smooth", block: "center" });
+    slide.scrollLeft -= slide.offsetWidth;
     //add fade animation to the component here
-    slide.classList.add("");
   };
 
   const slideRight = () => {
     // setCurrent(current === length - 1 ? 0 : current + 1);
     let slide = document.getElementById("slider");
     slide.scrollLeft += slide.offsetWidth;
-    slide.classList.add("");
+    //add fade animation to the component here
   };
 
   return (
