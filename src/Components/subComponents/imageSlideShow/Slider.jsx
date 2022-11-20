@@ -36,6 +36,7 @@ const Slider = () => {
     // setCurrent(current === 0 ? length - 1 : current - 1);
     let slide = document.getElementById("slider");
     slide.scrollLeft -= slide.offsetWidth;
+    current === 0 ? setCurrent(length - 1) : setCurrent(current - 1);
     //add fade animation to the component here
   };
 
@@ -43,8 +44,17 @@ const Slider = () => {
     // setCurrent(current === length - 1 ? 0 : current + 1);
     let slide = document.getElementById("slider");
     slide.scrollLeft += slide.offsetWidth;
+    current === length - 1 ? setCurrent(0) : setCurrent(current + 1);
     //add fade animation to the component here
   };
+  //added timout to the slide to give it time to scroll
+  setInterval(() => {
+    if (current === length - 1) {
+      setCurrent(0);
+    } else {
+      setCurrent(current + 1);
+    }
+  }, 5000);
 
   return (
     <div className="bg-blue-300 flex justify-center items-center max-w-[1600px]">
