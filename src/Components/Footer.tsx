@@ -12,57 +12,71 @@ const Footer = (props: Props) => {
   return (
     <div
       id="Footer"
-      className=" bg-black flex flex-col w-full  md:h-[70px] text-[#ffffffaa] justify-center items-center text-[12px]"
+      className=" bg-black flex flex-col w-full h-[500px] md:h-[300px] bottom-0 text-[#ffffff7d] justify-center items-staet text-[12px]md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px]"
     >
-      <div className="hidden md:flex items-center font-mono">
-        <p className="flex items-center ">
-          copyright <FaRegCopyright size={12} className="mx-1" />
-          Bandu Manamperi 2022 | All Rights Reserved |{" "}
-          {"Designed by Rashod Korala "}
-        </p>
-      </div>
-      <div className="flex flex-col md:hidden">
-        <ul className="flex flex-col items-center justify-center text-xl ">
-          <li className="py-1 mr-4">About</li>
-          <li className="py-1 mr-4">Projects</li>
-          <li className="py-1 mr-4">Home</li>
-          <li className="py-1 mr-4">Contact</li>
-        </ul>
-        <div className="py-3">
-          {/* social media icons */}
-          <div>
-            <ul className="flex">
-              <li>
+      
+      <div className="p-3">
+        <div className="py-3">Bandu Manamperi.</div>
+        <div className="grid grid-cols-2 justify-start items-start gap-7 md:grid-cols-3">
+          <div className="flex flex-col w-full h-full justify-start items-start border-t-2 border-[#c0c0c0ca]">
+            <h2 className="text-[14px] font-bold pt-1">EXPLORE</h2>
+            <ul className="flex flex-col text-[14px]">
+              <li className="px-0 py-2 uppercase">Home</li>
+              <li className="px-0 py-2 uppercase">About</li>
+              <li className="px-0 py-2 uppercase">Work</li>
+              <li className="px-0 py-2 uppercase">Contact</li>
+            </ul>
+          </div>
+          <div className="flex flex-col w-full h-full justify-start items-start border-t-2 border-[#c0c0c0ca]">
+            <h2 className="text-[14px] font-bold pt-1">SOCIAL</h2>
+            <ul className="flex flex-col text-[14px]">
+              <li className="flex py-1 px-0 items-center">
                 <a href="/">
-                  <FaFacebook size={20} />
-                </a>{" "}
+                  <FaFacebook size={15} className=" mr-1" />
+                </a>
+                Facebook
               </li>
-              <li>
+              <li className="flex py-1 px-0 items-center">
                 <a href="/">
-                  <FaInstagram size={20} />
-                </a>{" "}
+                  <FaInstagram size={15} className="mr-1" />
+                </a>
+                Instagram
               </li>
-              <li>
+              <li className="flex py-1 px-0 items-center">
                 <a href="/">
-                  <FaTwitter size={20} />
-                </a>{" "}
+                  <FaTwitter size={15} className="mr-1" />
+                </a>
+                Twitter
               </li>
-              <li>
+              <li className="flex py-1 px-0 items-center">
                 <a href="/">
-                  <HiOutlineMail size={20} />
+                  <HiOutlineMail size={15} className="mr-1" />
                 </a>{" "}
+                Mail
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col w-full h-full justify-start items-start border-t-2 border-[#c0c0c0ca]">
+            <h2 className="text-[14px] font-bold pt-1">CONTACT</h2>
+            <ul className="flex flex-col text-[14px]">
+              <li className="px-0 py-2">+94 773672789</li>
+              <li className="px-0 py-2">
+                67A1, Ihalawatta, Delgaswatta Temple Road,
+                Weedagama,Bandaragama, Sri Lanka.
               </li>
             </ul>
           </div>
         </div>
-        <p className="flex items-center text-center font-mono">
-          {" "}
-          copyright <FaRegCopyright size={12} className="mx-1" />
-          Bandu Manamperi 2022
-        </p>
-        <p className="text-center font-mono text-md">
-          Designed by Rashod Korala
-        </p>
+        <div className="flex flex-col justify-center items-center w-full border-t-2 border-[#c0c0c0ca] ">
+          <div className="flex flex-col justify-center items-center w-full h-full p-2 md:flex-row md:justify-around ">
+            <span className="text-[12px] flex items-center">
+              <FaRegCopyright size={15} className="mr-1" />
+              2021 Bandu Manamperi{" "}
+            </span>
+            <span className="text-[12px]">All Rights Reserved</span>
+            <span className="text-[12px]">Designed By Rashod Korala</span>
+          </div>
+        </div>
       </div>
     </div>
   );

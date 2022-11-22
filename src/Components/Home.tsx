@@ -1,13 +1,11 @@
-import React from "react";
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-import Slider from "./subComponents/imageSlideShow/Slider";
+import React from 'react'
 
-const Home = () => {
+type Props = {}
+
+const Home = (props: Props) => {
   return (
-    <div className="flex w-full h-screen bg-white justify-center items-center">
-      <Slider />
-    </div>
-  );
-};
+    <div>Home</div>
+  )
+}
 
-export default Home;
+export default Home

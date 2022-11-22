@@ -8,7 +8,7 @@ import Gallery from "../src/Components/Gallery";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col">
       <Navbar />
       <Main />
       <About />

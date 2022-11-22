@@ -1,63 +1,55 @@
 import React, { useState } from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
-const imageData = [
-  {
-    id: 1,
-    img: "https://picsum.photos/id/15/1600/800",
-    title: "Title 1",
-    description: "Description 1",
-  },
-  {
-    id: 2,
-    img: "https://picsum.photos/id/16/1600/800",
-    title: "Title 2",
-    description: "Description 2",
-  },
-  {
-    id: 3,
-    img: "https://picsum.photos/1600/800?random=3",
-    title: "Title 3",
-    description: "Description 3",
-  },
-  {
-    id: 4,
-    img: "https://picsum.photos/1600/800?random=4",
-    title: "Title 4",
-    description: "Description 4",
-  },
-];
+function createImage(width, height) {
+  const images = [];
+ 
+  for (let index = 0; index < 5; index++) {
+    //different sizes of images
+
+    images.push({
+      id: index + "",
+      img:
+        "https://picsum.photos/" +
+        width +
+        "/" +
+        height +
+        "/" +
+        "?random=" +
+        index,
+      width: width,
+      height: height,
+      view: "desktop",
+    });
+  }
+  return images;
+}
 
 const Slider = () => {
-  const [current, setCurrent] = useState(0);
+  
+  const imageData = createImage(1800, 600);
+  const imageDataMobile = createImage(400,200);
 
-  const length = imageData.length;
   const slideLeft = () => {
     // setCurrent(current === 0 ? length - 1 : current - 1);
-    let slide = document.getElementById("slider");
+    let slide = document.getElementById("sliderdesktop");
     slide.scrollLeft -= slide.offsetWidth;
-    current === 0 ? setCurrent(length - 1) : setCurrent(current - 1);
-    //add fade animation to the component here
+
+    let slideMobile = document.getElementById("slidermobile");
+    slideMobile.scrollLeft -= slideMobile.offsetWidth;
   };
 
   const slideRight = () => {
     // setCurrent(current === length - 1 ? 0 : current + 1);
-    let slide = document.getElementById("slider");
+    let slide = document.getElementById("sliderdesktop");
     slide.scrollLeft += slide.offsetWidth;
-    current === length - 1 ? setCurrent(0) : setCurrent(current + 1);
-    //add fade animation to the component here
+
+    let slideMobile = document.getElementById("slidermobile");
+    slideMobile.scrollLeft += slideMobile.offsetWidth;
   };
-  //added timout to the slide to give it time to scroll
-  setInterval(() => {
-    if (current === length - 1) {
-      setCurrent(0);
-    } else {
-      setCurrent(current + 1);
-    }
-  }, 5000);
 
   return (
-    <div className="bg-blue-300 flex justify-center items-center max-w-[1600px]">
+    <div className="bg-blue-300 flex justify-center items-center w-full mx-auto">
       <div className="relative">
         <MdChevronLeft
           onClick={slideLeft}
@@ -65,8 +57,8 @@ const Slider = () => {
         />
       </div>
       <div
-        id="slider"
-        className="flex flex-row overflow-x-scroll scroll whitespace-nowrap scroll-smooth snap-mandatory snap-x scrollbar-hide"
+        id="sliderdesktop"
+        className=" hidden md:flex md:flex-row overflow-x-scroll scroll whitespace-nowrap scroll-smooth snap-mandatory snap-x scrollbar-hide "
       >
         {/* <img
           id="slideImg"
@@ -74,8 +66,36 @@ const Slider = () => {
           alt=""
           className="transition duration-500 ease-in-out transform"
         /> */}
+        {/* in mobile view load mobile images
+      and in desktop view load desktop images */}
         {imageData.map((image) => (
-          <img src={image.img} className="bg-black snap-center" />
+          <img
+            key={image.id}
+            src={image.img}
+            alt=""
+            className="transition duration-500 ease-in-out transform snap-center"
+          />
+        ))}
+      </div>
+      <div
+        id="slidermobile"
+        className="flex flex-row overflow-x-scroll scroll whitespace-nowrap scroll-smooth snap-mandatory snap-x scrollbar-hide md:hidden"
+      >
+        {/* <img
+          id="slideImg"
+          src={imageData[current].img}
+          alt=""
+          className="transition duration-500 ease-in-out transform"
+        /> */}
+        {/* in mobile view load mobile images
+      and in desktop view load desktop images */}
+        {imageDataMobile.map((image) => (
+          <img
+            key={image.id}
+            src={image.img}
+            alt=""
+            className="transition duration-500 ease-in-out transform snap-center"
+          />
         ))}
       </div>
       <div className="relative bg-black" onClick={slideRight}>
