@@ -11,7 +11,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 type Props = {};
 
-const Navbar = (props: Props) => {
+const NavBar = (props: Props) => {
   const [nav, setNav] = useState(false);
   const HandleClick = () => setNav(!nav);
 
@@ -77,4 +77,4 @@ const Navbar = (props: Props) => {
   );
 };
 
-export default Navbar;
+export default NavBar;
