@@ -3,7 +3,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 function createImage(width, height) {
   const images = [];
- 
+
   for (let index = 0; index < 5; index++) {
     //different sizes of images
 
@@ -26,9 +26,8 @@ function createImage(width, height) {
 }
 
 const Slider = () => {
-  
   const imageData = createImage(1800, 600);
-  const imageDataMobile = createImage(400,200);
+  const imageDataMobile = createImage(400, 200);
 
   const slideLeft = () => {
     // setCurrent(current === 0 ? length - 1 : current - 1);
@@ -69,7 +68,7 @@ const Slider = () => {
         {/* in mobile view load mobile images
       and in desktop view load desktop images */}
         {imageData.map((image) => (
-          <img
+          <Image
             key={image.id}
             src={image.img}
             alt=""
@@ -90,7 +89,7 @@ const Slider = () => {
         {/* in mobile view load mobile images
       and in desktop view load desktop images */}
         {imageDataMobile.map((image) => (
-          <img
+          <Image
             key={image.id}
             src={image.img}
             alt=""
