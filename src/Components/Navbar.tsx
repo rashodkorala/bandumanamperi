@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Link as LinkS } from "react-scroll";
+
 import React, { useState } from "react";
 import {
   FaFacebook,
@@ -42,7 +44,10 @@ const Navbar = (props: Props) => {
             : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center"
         }
       >
-        <li className="py-2 text-xl">Home</li>
+        <li className="py-2 text-xl">
+          <LinkS to="#Gallery"></LinkS>
+          {"Home "}
+        </li>
         <li className="py-2 text-xl">About</li>
         <li className="py-2 text-xl">Work</li>
         <li className="py-2 text-xl">Contact</li>
