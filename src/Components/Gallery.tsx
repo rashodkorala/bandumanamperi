@@ -34,10 +34,11 @@ const Gallery = (props: Props) => {
     <div className="w-full bg-white">
       <div className="max-w-[1300px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
         <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">Gallery</h1>
-        <div key={""} className="columns-3 gap-3 mx-auto space-y-3 py-28">
+        <div className="columns-3 gap-3 mx-auto space-y-3 py-28">
           {images.map((image) => (
             <div className="break-inside-avoid">
               <Image
+                key={image.id}
                 src={image.src}
                 alt="image"
                 className={image.span}
