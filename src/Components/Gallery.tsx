@@ -44,6 +44,7 @@ const Gallery = (props: Props) => {
                 className={image.span}
                 width={image.width}
                 height={image.height}
+                
               />
             </div>
           ))}
