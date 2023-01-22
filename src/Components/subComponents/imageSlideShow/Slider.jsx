@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
+import Image from "next/image";
+
 function createImage(width, height) {
   const images = [];
 
