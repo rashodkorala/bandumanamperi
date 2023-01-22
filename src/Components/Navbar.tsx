@@ -45,8 +45,9 @@ const Navbar = (props: Props) => {
         }
       >
         <li className="py-2 text-xl">
-          <LinkS to="#work"></LinkS>
-          {"Home "}
+          <LinkS to="home" smooth={true} duration={500}>
+            Home
+          </LinkS>
         </li>
         <li className="py-2 text-xl">About</li>
         <li className="py-2 text-xl">Work</li>
