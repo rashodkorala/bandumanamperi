@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import {
   FaFacebook,
@@ -50,24 +51,24 @@ const Navbar = (props: Props) => {
         <div className="py-2">
           <ul className="flex">
             <li>
-              <a href="/">
+              <Link href="/">
                 <FaFacebook size={30} />
-              </a>{" "}
+              </Link>{" "}
             </li>
             <li>
-              <a href="/">
+              <Link href="/">
                 <FaInstagram size={30} />
-              </a>{" "}
+              </Link>{" "}
             </li>
             <li>
-              <a href="/">
+              <Link href="/">
                 <FaTwitter size={30} />
-              </a>{" "}
+              </Link>{" "}
             </li>
             <li>
-              <a href="/">
+              <Link href="/">
                 <HiOutlineMail size={30} />
-              </a>{" "}
+              </Link>{" "}
             </li>
           </ul>
         </div>
