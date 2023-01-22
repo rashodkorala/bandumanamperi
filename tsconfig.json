@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/Components/subComponents/imageSlideShow/Slider.jsx", "src/Components/CarouselFadeExample.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/Components/subComponents/imageSlideShow/Slider.jsx",],
   "exclude": ["node_modules"]
 }
