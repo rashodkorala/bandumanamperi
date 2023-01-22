@@ -3,7 +3,7 @@ import About from "../src/Components/About";
 import Work from "../src/Components/Work";
 import Contact from "../src/Components/Contact";
 import Footer from "../src/Components/Footer";
-import Navbar from "../src/Components/NavBar";
+import Navbar from "../src/Components/Navbar";
 import Gallery from "../src/Components/Gallery";
 
 export default function Home() {
