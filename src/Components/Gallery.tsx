@@ -26,7 +26,9 @@ function createImage() {
   return images;
 }
 const images = createImage();
-const Gallery = () => {
+type Props = {};
+
+const Gallery = (props: Props) => {
   // const images = createImage();
   return (
     <div className="w-full bg-white">

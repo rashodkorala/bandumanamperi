@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiArrowCircleLeft, HiArrowCircleRight } from "react-icons/hi";
+import ArtistCv from "./subComponents/ArtistCv";
 
 type Props = {};
 
 const About = (props: Props) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
     <div className="w-full h-screen bg-white ">
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
@@ -24,7 +26,7 @@ const About = (props: Props) => {
             to create memories that become inscribed within us.
           </p>
         </div>
-        <a
+        {/* <a
           href="https://photosbyrashod.myportfolio.com"
           target="_blank"
           rel="noreferrer"
@@ -32,7 +34,8 @@ const About = (props: Props) => {
         >
           View Artist CV
           <HiArrowCircleRight />
-        </a>
+        </a> */}
+        <button onClick={() => setIsPopupOpen(true)}>Open CV</button>
       </div>
     </div>
   );

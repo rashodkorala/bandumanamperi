@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "./subComponents/imageSlideShow/Slider";
 
-
-const Work = () => {
+type Props = {};
+const Work = (props: Props) => {
   return (
     <div className="w-full h-screen bg-white">
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
