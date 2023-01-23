@@ -5,7 +5,6 @@ import Contact from "../src/Components/Contact";
 import Footer from "../src/Components/Footer";
 import Navbar from "../src/Components/Navbar";
 
-import Gallery from "../src/Components/Gallery";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -16,7 +15,7 @@ export default function Home() {
       <About />
       <Work />
       <Contact />
-      <Gallery />
+      {/* <Gallery /> */}
       <Footer />
     </div>
   );
