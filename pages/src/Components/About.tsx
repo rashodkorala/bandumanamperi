@@ -5,6 +5,7 @@ import { HiArrowCircleLeft, HiArrowCircleRight } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
 
+import Data from "../data/data";
 
 type Props = {};
 
@@ -68,7 +69,7 @@ const About = (props: Props) => {
                   <h1 className="text-2xl font-bold text-black">
                     Bandu Manamperi
                   </h1>
-                  
+
                   <div
                     className="cursor-pointer z-50"
                     onClick={() => setIsPopupOpen(false)}

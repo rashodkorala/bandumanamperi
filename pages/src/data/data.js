@@ -320,3 +320,5 @@ const artistCv = [
     ],
   },
 ];
+
+export default data;

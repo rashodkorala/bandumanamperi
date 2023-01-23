@@ -19,7 +19,7 @@ const ArtistCv = () => {
 
           {isPopupOpen && (
             <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
-              <div className="absolute top-0 left-0 w-full h-full bg-white opacity-50"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-white"></div>
 
               <div className="bg-white w-full md:max-w-full mx-auto rounded shadow-lg py-4 text-left px-6">
                 <div className="flex justify-between items-center pb-3">
@@ -27,9 +27,8 @@ const ArtistCv = () => {
                   <div
                     className="cursor-pointer z-50"
                     onClick={() => setIsPopupOpen(false)}
-                    
                   >close</div>
-                  Hello Hi
+                  
                 </div>
               </div>
             </div>
