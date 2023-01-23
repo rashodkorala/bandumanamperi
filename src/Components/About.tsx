@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HiArrowCircleLeft, HiArrowCircleRight } from "react-icons/hi";
-import ArtistCv from "./subComponents/ArtistCv";
+// import ArtistCv from "./subComponents/ArtistCv";
 
 import Image from "next/image";
 type Props = {};
@@ -33,16 +33,16 @@ const About = (props: Props) => {
           <p className="py-4 text-[12px] xsm:text-md xl:text-xl text-left font-light ">
             <strong className="font-bold">Bandu Manamperi</strong> is a renowned
             artist who holds a BFA in sculpture and is a part of Colombo's
-            Theertha Artists' Collective. He is a pioneer of performance art in
-            Sri Lanka and continues to be an influential figure in the field. He
-            creates deeply personal artworks that focus on the transformation of
-            his own body, while also working in other mediums such as sculpture,
-            drawing, painting, and installation. He frequently lectures and
-            consults on various topics such as contemporary art, performance,
-            museology, and traditional craft techniques. His art practice
-            explores themes of memory and the ways in which external events and
-            ideologies shape our individual experiences and become inscribed in
-            our bodies.
+            Theertha Artists&apos;Collective. He is a pioneer of performance art
+            in Sri Lanka and continues to be an influential figure in the field.
+            He creates deeply personal artworks that focus on the transformation
+            of his own body, while also working in other mediums such as
+            sculpture, drawing, painting, and installation. He frequently
+            lectures and consults on various topics such as contemporary art,
+            performance, museology, and traditional craft techniques. His art
+            practice explores themes of memory and the ways in which external
+            events and ideologies shape our individual experiences and become
+            inscribed in our bodies.
           </p>
           <a
             href="https://photosbyrashod.myportfolio.com"
