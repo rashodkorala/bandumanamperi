@@ -27,9 +27,12 @@ const Navbar = (props: Props) => {
       <div className="hidden md:flex">
         <ul className="flex">
           <li className="mr-4">
-            <LinkS activeClass="active" to="about" smooth={true} duration={500}>
+            {/* <LinkS activeClass="active" to="about" smooth={true} duration={500}>
               About
-            </LinkS>
+            </LinkS> */}
+            <Link href={"/"} legacyBehavior>
+              <a>About</a>
+            </Link>
           </li>
           <li className="mr-4">
             <LinkS activeClass="active" to="work" smooth={true} duration={500}>
@@ -47,7 +50,7 @@ const Navbar = (props: Props) => {
             </LinkS>
           </li>
           <li className="mr-4">
-            <LinkS
+            {/* <LinkS
               activeClass="active"
               to="gallery"
               smooth={true}
@@ -56,7 +59,10 @@ const Navbar = (props: Props) => {
               offset={-100}
             >
               Gallery
-            </LinkS>
+            </LinkS> */}
+            <Link href={"/gallery"} legacyBehavior>
+              <a>Gallery</a>
+            </Link>
           </li>
         </ul>
       </div>

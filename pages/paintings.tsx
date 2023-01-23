@@ -1,5 +1,5 @@
-import Footer from "../src/Components/Footer";
-import Navbar from "../src/Components/Navbar";
+import Footer from "./src/Components/Footer";
+import Navbar from "./src/Components/Navbar";
 
 export default function Paintings() {
   return (
