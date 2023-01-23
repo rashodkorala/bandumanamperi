@@ -27,8 +27,8 @@ function createImage(width, height) {
   return images;
 }
 
-const Slider = () => {
-  const imageData = createImage(2000, 600);
+const Slider = ({ width, height }) => {
+  const imageData = createImage(width, height);
   const imageDataMobile = createImage(400, 200);
 
   const slideLeft = () => {
@@ -36,8 +36,8 @@ const Slider = () => {
     let slide = document.getElementById("sliderdesktop");
     slide.scrollLeft -= slide.offsetWidth;
 
-    let slideMobile = document.getElementById("slidermobile");
-    slideMobile.scrollLeft -= slideMobile.offsetWidth;
+    // let slideMobile = document.getElementById("slidermobile");
+    // slideMobile.scrollLeft -= slideMobile.offsetWidth;
   };
 
   const slideRight = () => {
@@ -45,8 +45,8 @@ const Slider = () => {
     let slide = document.getElementById("sliderdesktop");
     slide.scrollLeft += slide.offsetWidth;
 
-    let slideMobile = document.getElementById("slidermobile");
-    slideMobile.scrollLeft += slideMobile.offsetWidth;
+    // let slideMobile = document.getElementById("slidermobile");
+    // slideMobile.scrollLeft += slideMobile.offsetWidth;
   };
 
   return (
@@ -59,14 +59,8 @@ const Slider = () => {
       </div>
       <div
         id="sliderdesktop"
-        className=" hidden md:flex md:flex-row overflow-x-scroll scroll whitespace-nowrap scroll-smooth snap-mandatory snap-x scrollbar-hide "
+        className="flex flex-row overflow-x-scroll scroll whitespace-nowrap scroll-smooth snap-mandatory snap-x scrollbar-hide "
       >
-        {/* <img
-          id="slideImg"
-          src={imageData[current].img}
-          alt=""
-          className="transition duration-500 ease-in-out transform"
-        /> */}
         {/* in mobile view load mobile images
       and in desktop view load desktop images */}
         {imageData.map((image) => (
@@ -80,18 +74,12 @@ const Slider = () => {
           />
         ))}
       </div>
-      <div
+      {/* <div
         id="slidermobile"
         className="flex flex-row overflow-x-scroll scroll whitespace-nowrap scroll-smooth snap-mandatory snap-x scrollbar-hide md:hidden"
       >
-        {/* <img
-          id="slideImg"
-          src={imageData[current].img}
-          alt=""
-          className="transition duration-500 ease-in-out transform"
-        /> */}
-        {/* in mobile view load mobile images
-      and in desktop view load desktop images */}
+        in mobile view load mobile images
+      and in desktop view load desktop images
         {imageDataMobile.map((image) => (
           <Image
             key={image.id}
@@ -102,7 +90,7 @@ const Slider = () => {
             height={image.height}
           />
         ))}
-      </div>
+      </div> */}
       <div className="relative bg-black" onClick={slideRight}>
         <MdChevronRight
           onClick={slideRight}

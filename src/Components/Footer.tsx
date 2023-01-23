@@ -14,7 +14,7 @@ const Footer = (props: Props) => {
   return (
     <div
       id="Footer"
-      className=" bg-black flex flex-col w-full h-[500px] md:h-[300px] bottom-0 text-[#ffffff7d] justify-center items-staet text-[12px]md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px]"
+      className=" snap-center bg-black flex flex-col w-full h-[500px] md:h-[300px] bottom-0 text-[#ffffff7d] justify-center items-staet text-[12px]md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px]"
     >
       <div className="p-3">
         <div className="py-3">Bandu Manamperi.</div>
