@@ -48,7 +48,7 @@ const About = (props: Props) => {
             href="https://photosbyrashod.myportfolio.com"
             target="_blank"
             rel="noreferrer"
-            className="p-4 flex items-center text-md hover:scale-110 transition-all duration-1000 ease-in-out bg-black w-[130px] text-white rounded-[45px] px-4 py-2 items-center justify-center space-x-2"
+            className="p-4 flex text-md hover:scale-110 transition-all duration-1000 ease-in-out bg-black w-[130px] text-white rounded-[45px] px-4 py-2 items-center justify-center space-x-2"
           >
             View CV
             <HiArrowCircleRight />
