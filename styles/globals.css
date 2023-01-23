@@ -5,7 +5,9 @@
 @layer base {
   body {
     @apply font-sans;
-    /* @apply bg-black; */
+    @apply bg-transparent;
+    scroll-behavior: smooth;
+
   }
   li {
     @apply px-4;
