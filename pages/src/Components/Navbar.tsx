@@ -31,23 +31,39 @@ const Navbar = (props: Props) => {
               About
             </LinkS> */}
             <Link href={"/"} legacyBehavior>
-              <a>About</a>
+              <LinkS
+                activeClass="active"
+                to="about"
+                smooth={true}
+                duration={500}
+              >
+                About
+              </LinkS>
             </Link>
           </li>
           <li className="mr-4">
-            <LinkS activeClass="active" to="work" smooth={true} duration={500}>
-              Work
-            </LinkS>
+            <Link href={"/"} legacyBehavior>
+              <LinkS
+                activeClass="active"
+                to="work"
+                smooth={true}
+                duration={500}
+              >
+                Work
+              </LinkS>
+            </Link>
           </li>
           <li className="mr-4">
-            <LinkS
-              activeClass="active"
-              to="contact"
-              smooth={true}
-              duration={500}
-            >
-              Contact
-            </LinkS>
+            <Link href={"/"} legacyBehavior>
+              <LinkS
+                activeClass="active"
+                to="contact"
+                smooth={true}
+                duration={500}
+              >
+                Contact
+              </LinkS>
+            </Link>
           </li>
           <li className="mr-4">
             {/* <LinkS
