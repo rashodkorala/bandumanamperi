@@ -30,7 +30,7 @@ const Navbar = (props: Props) => {
             {/* <LinkS activeClass="active" to="about" smooth={true} duration={500}>
               About
             </LinkS> */}
-            <Link href={"/"} legacyBehavior>
+            <Link href={"/#about"} legacyBehavior scroll={false}>
               <LinkS
                 activeClass="active"
                 to="about"
@@ -42,7 +42,7 @@ const Navbar = (props: Props) => {
             </Link>
           </li>
           <li className="mr-4">
-            <Link href={"/"} legacyBehavior>
+            <Link href={"/#work"} legacyBehavior scroll={false}>
               <LinkS
                 activeClass="active"
                 to="work"
@@ -54,7 +54,7 @@ const Navbar = (props: Props) => {
             </Link>
           </li>
           <li className="mr-4">
-            <Link href={"/"} legacyBehavior>
+            <Link href={"/#contact"} legacyBehavior scroll={false}>
               <LinkS
                 activeClass="active"
                 to="contact"
