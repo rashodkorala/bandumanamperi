@@ -28,7 +28,7 @@ function createImage(width, height) {
 }
 
 const Slider = () => {
-  const imageData = createImage(1800, 600);
+  const imageData = createImage(2000, 600);
   const imageDataMobile = createImage(400, 200);
 
   const slideLeft = () => {
@@ -75,6 +75,8 @@ const Slider = () => {
             src={image.img}
             alt=""
             className="transition duration-500 ease-in-out transform snap-center"
+            width={image.width}
+            height={image.height}
           />
         ))}
       </div>
@@ -96,6 +98,8 @@ const Slider = () => {
             src={image.img}
             alt=""
             className="transition duration-500 ease-in-out transform snap-center"
+            width={image.width}
+            height={image.height}
           />
         ))}
       </div>
