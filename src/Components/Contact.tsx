@@ -4,7 +4,7 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <div className="w-full h-screen bg-white">
+    <div id="contact" className="w-full h-screen bg-white">
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center items-center h-full text-black xsm:px-5">
         <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">Contact</h1>
         <form

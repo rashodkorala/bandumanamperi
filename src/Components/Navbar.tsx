@@ -26,10 +26,38 @@ const Navbar = (props: Props) => {
       {/* menu */}
       <div className="hidden md:flex">
         <ul className="flex">
-          <li className="mr-4">Home</li>
-          <li className="mr-4">About</li>
-          <li className="mr-4">Work</li>
-          <li className="mr-4">Contact</li>
+          <li className="mr-4">
+            <LinkS activeClass="active" to="about" smooth={true} duration={500}>
+              About
+            </LinkS>
+          </li>
+          <li className="mr-4">
+            <LinkS activeClass="active" to="work" smooth={true} duration={500}>
+              Work
+            </LinkS>
+          </li>
+          <li className="mr-4">
+            <LinkS
+              activeClass="active"
+              to="contact"
+              smooth={true}
+              duration={500}
+            >
+              Contact
+            </LinkS>
+          </li>
+          <li className="mr-4">
+            <LinkS
+              activeClass="active"
+              to="gallery"
+              smooth={true}
+              duration={500}
+
+              offset={-100}
+            >
+              Gallery
+            </LinkS>
+          </li>
         </ul>
       </div>
       {/* hamburger menu */}
@@ -45,7 +73,13 @@ const Navbar = (props: Props) => {
         }
       >
         <li className="py-2 text-xl">
-          <LinkS to="home" smooth={true} duration={500}>
+          <LinkS
+            activeClass="active"
+            to="work"
+            containerId="work"
+            smooth={true}
+            duration={500}
+          >
             Home
           </LinkS>
         </li>
@@ -57,22 +91,22 @@ const Navbar = (props: Props) => {
         <div className="py-2">
           <ul className="flex">
             <li>
-              <Link href="/">
+              <Link href={"/"}>
                 <FaFacebook size={30} />
               </Link>{" "}
             </li>
             <li>
-              <Link href="/">
+              <Link href={"/"}>
                 <FaInstagram size={30} />
               </Link>{" "}
             </li>
             <li>
-              <Link href="/">
+              <Link href={"/"}>
                 <FaTwitter size={30} />
               </Link>{" "}
             </li>
             <li>
-              <Link href="/">
+              <Link href={"/"}>
                 <HiOutlineMail size={30} />
               </Link>{" "}
             </li>

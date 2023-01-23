@@ -29,9 +29,9 @@ const images = createImage();
 type Props = {};
 
 const Gallery = (props: Props) => {
-  // const images = createImage();
+  props
   return (
-    <div id="Gallery" className="w-full bg-white">
+    <div id="gallery" className="w-full bg-white">
       <div className="max-w-[1300px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
         <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">Gallery</h1>
         <div className="columns-3 gap-3 mx-auto space-y-3 py-28">
@@ -44,7 +44,6 @@ const Gallery = (props: Props) => {
                 className={image.span}
                 width={image.width}
                 height={image.height}
-                
               />
             </div>
           ))}

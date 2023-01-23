@@ -7,7 +7,7 @@ type Props = {};
 const About = (props: Props) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
-    <div className="w-full h-screen bg-white ">
+    <div id="about" className="w-full h-screen bg-white ">
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
         <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">About</h1>
         <div className="flex md:flex-col md:grid md:grid-cols-1 ">
