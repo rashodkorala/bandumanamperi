@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="snap-y snap-mandatory flex flex-col gap-[50px] md:gap-0">
       <Navbar />
-      <Main />
+      {/* <Main /> */}
       <About />
       <Work />
       <Contact />
