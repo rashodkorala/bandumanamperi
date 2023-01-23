@@ -5,7 +5,7 @@ import { HiArrowCircleLeft, HiArrowCircleRight } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
 
-import Data from "../data/data";
+// import Data from "../data/data";
 
 type Props = {};
 
