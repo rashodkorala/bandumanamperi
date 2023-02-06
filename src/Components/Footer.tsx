@@ -63,7 +63,7 @@ const Footer = (props: Props) => {
             <h2 className="text-[14px] font-bold pt-1">CONTACT</h2>
             <ul className="flex flex-col text-[14px] pt-2">
               <li className="px-0 pb-2 text-[19px] font-bold">
-                Bandu Manamper's Home & Studio.
+                Bandu Manamper&apos;s Home & Studio.
               </li>
               <li className="px-0 pb-2">+94 773672789</li>
               <li className="px-0 pb-2">
@@ -84,6 +84,7 @@ const Footer = (props: Props) => {
               <a
                 href="https://rashodkorala.com"
                 target={"_blank"}
+                rel="noreferrer"
                 className="hover:underline "
               >
                 Designed By Rashod Korala
