@@ -1,6 +1,6 @@
 import React from "react";
-import Gallery from "./src/Components/Gallery";
-import Navbar from "./src/Components/Navbar";
+import Gallery from "../src/Components/Gallery";
+import Navbar from "../src/Components/Navbar";
 
 type Props = {};
 
