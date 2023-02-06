@@ -24,52 +24,56 @@ const Footer = (props: Props) => {
           <div className="flex flex-col w-full h-full justify-start items-start border-t-2 border-[#c0c0c0ca]">
             <h2 className="text-[14px] font-bold pt-1">EXPLORE</h2>
             <ul className="flex flex-col text-[14px] pt-2">
-              <li className="px-0 pb-1 uppercase">Home</li>
-              <li className="px-0 pb-1 uppercase">About</li>
-              <li className="px-0 pb-1 uppercase">Work</li>
-              <li className="px-0 pb-1 uppercase">Contact</li>
+              <Link href="/" className="px-0 pb-1 uppercase">
+                Home
+              </Link>
+              <Link href="/" className="px-0 pb-1 uppercase">
+                About
+              </Link>
+              <Link href="/" className="px-0 pb-1 uppercase">
+                Work
+              </Link>
+              <Link href="/" className="px-0 pb-1 uppercase">
+                Contact
+              </Link>
             </ul>
           </div>
           <div className="flex flex-col w-full h-full justify-start items-start border-t-2 border-[#c0c0c0ca]">
             <h2 className="text-[14px] font-bold pt-1">SOCIAL</h2>
-            <ul className="flex flex-col text-[14px pt-2">
-              <li className="flex py-1 px-0 items-center hover:underline">
-                <Link href="/">
-                  <FaFacebook size={15} className=" mr-1 hover:underline" />
-                </Link>
+            <ul className="flex flex-col text-[14px pt-2 gpa-1 pb-1">
+              {/* <li className="flex py-1 px-0 items-center hover:underline"> */}
+              <Link href="/" className="flex px-0 items-center hover:underline">
+                <FaFacebook size={15} className=" mr-1 hover:underline" />
                 Facebook
-              </li>
-              <li className="flex pb-1 px-0 items-center hover:underline">
-                <Link href="/">
-                  <FaInstagram size={15} className="mr-1 hover:underline" />
-                </Link>
+              </Link>
+
+              <Link href="/" className="flex px-0 items-center hover:underline">
+                <FaInstagram size={15} className="mr-1 hover:underline" />
                 Instagram
-              </li>
-              <li className="flex pb-1 px-0 items-center hover:underline">
-                <Link href="/">
-                  <FaTwitter size={15} className="mr-1" />
-                </Link>
+              </Link>
+
+              <Link href="/" className="flex px-0 items-center hover:underline">
+                <FaTwitter size={15} className="mr-1" />
                 Twitter
-              </li>
-              <li className="flex pb-1 px-0 items-center">
-                <Link href="/">
-                  <HiOutlineMail size={15} className="mr-1" />
-                </Link>{" "}
-                Mail
-              </li>
+              </Link>
+
+              <Link href="/" className="flex px-0 items-center hover:underline">
+                <HiOutlineMail size={15} className="mr-1" />
+                Email
+              </Link>
             </ul>
           </div>
           <div className="flex flex-col w-full h-full justify-start items-start border-t-2 border-[#c0c0c0ca]">
             <h2 className="text-[14px] font-bold pt-1">CONTACT</h2>
             <ul className="flex flex-col text-[14px] pt-2">
-              <li className="px-0 pb-2 text-[19px] font-bold">
+              <p className="px-0 pb-2 text-[19px] font-bold">
                 Bandu Manamperi&apos;s Home & Studio.
-              </li>
-              <li className="px-0 pb-2">+94 773672789</li>
-              <li className="px-0 pb-2">
+              </p>
+              <p className="px-0 pb-2">+94 773672789</p>
+              <p className="px-0 pb-2">
                 67A1, Ihalawatta, Delgaswatta Temple Road,
                 Weedagama,Bandaragama, Sri Lanka.
-              </li>
+              </p>
             </ul>
           </div>
         </div>
@@ -81,14 +85,14 @@ const Footer = (props: Props) => {
             </span>
             <span className="text-[12px]">All Rights Reserved</span>
             <span className="text-[12px]">
-              <a
+              <Link
                 href="https://rashodkorala.com"
                 target={"_blank"}
                 rel="noreferrer"
                 className="hover:underline "
               >
                 Designed By Rashod Korala
-              </a>
+              </Link>
             </span>
           </div>
         </div>
