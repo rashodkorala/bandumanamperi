@@ -14,8 +14,8 @@ const Navbar = (props: Props) => {
   const HandleClick = () => setNav(!nav);
 
   return (
-    <div className=" bg-white fixed w-full h-[80px] flex justify-between items-center px-4 text-black z-10">
-      <div className="z-10">
+    <div className=" bg-white fixed w-full h-[80px] flex justify-between items-center px-4 text-black z-50">
+      <div className="z-50">
         <h1>Bandu Manamperi</h1>
         {/* <img src={Logo} alt="logo" style={{ width: "50px" }} /> */}
       </div>
@@ -24,8 +24,8 @@ const Navbar = (props: Props) => {
         <ul className="flex">
           {navLinks.map((link, index) => (
             <li className="mr-4" key={index}>
-              <Link href={link.path} legacyBehavior scroll={false}>
-                <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500}>
+              <Link href={link.path} legacyBehavior scroll={link.title === "Gallery" ? false : true}>
+                <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500} offset={-200}>
                   {link.title}
                 </LinkS>
               </Link>
@@ -34,15 +34,15 @@ const Navbar = (props: Props) => {
         </ul>
       </div>
       {/* hamburger menu */}
-      <div onClick={HandleClick} className="md:hidden z-10">
+      <div onClick={HandleClick} className="md:hidden z-20">
         {nav ? <FaTimes /> : <FaBars />}
       </div>
       {/* mobile meunu */}
-      <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center"}>
+      <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center z-10"}>
         {navLinks.map((link, index) => (
           <li className="py-4" key={index}>
             <Link href={link.path} legacyBehavior scroll={false}>
-              <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500}>
+              <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500} onClick={HandleClick}>
                 {link.title}
               </LinkS>
             </Link>

@@ -60,7 +60,7 @@ const Slider = ({ width, height }) => {
             key={image.id}
             src={image.img}
             alt=""
-            className="transition duration-500 ease-in-out transform snap-center z-10"
+            className="transition duration-500 ease-in-out transform snap-center"
             width={image.width}
             height={image.height}
           />

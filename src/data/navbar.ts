@@ -11,6 +11,6 @@ export const navLinks = [
 
 export const socialLinks = [
   { title: "Twitter", path: "https://twitter.com/yourusername", icon: FaTwitter },
-  { title: "Instagram", path: "https://instagram.com/yourusername", icon: FaInstagram },
+  { title: "Instagram", path: "https://instagram.com/bandumanamperi", icon: FaInstagram },
   { title: "LinkedIn", path: "https://linkedin.com/in/yourusername", icon: FaFacebook },
 ];
