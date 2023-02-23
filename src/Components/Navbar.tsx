@@ -1,14 +1,10 @@
 import Link from "next/link";
 import { Link as LinkS } from "react-scroll";
 
+import { navLinks, socialLinks } from "../data/navbar";
+
 import React, { useState } from "react";
-import {
-  FaFacebook,
-  FaTimes,
-  FaBars,
-  FaInstagram,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaFacebook, FaTimes, FaBars, FaInstagram, FaTwitter } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
 type Props = {};
@@ -26,60 +22,15 @@ const Navbar = (props: Props) => {
       {/* menu */}
       <div className="hidden md:flex">
         <ul className="flex">
-          <li className="mr-4">
-            {/* <LinkS activeClass="active" to="about" smooth={true} duration={500}>
-              About
-            </LinkS> */}
-            <Link href={"/#about"} legacyBehavior scroll={false}>
-              <LinkS
-                activeClass="active"
-                to="about"
-                smooth={true}
-                duration={500}
-              >
-                About
-              </LinkS>
-            </Link>
-          </li>
-          <li className="mr-4">
-            <Link href={"/#work"} legacyBehavior scroll={false}>
-              <LinkS
-                activeClass="active"
-                to="work"
-                smooth={true}
-                duration={500}
-              >
-                Work
-              </LinkS>
-            </Link>
-          </li>
-          <li className="mr-4">
-            <Link href={"/#contact"} legacyBehavior scroll={false}>
-              <LinkS
-                activeClass="active"
-                to="contact"
-                smooth={true}
-                duration={500}
-              >
-                Contact
-              </LinkS>
-            </Link>
-          </li>
-          <li className="mr-4">
-            {/* <LinkS
-              activeClass="active"
-              to="gallery"
-              smooth={true}
-              duration={500}
-
-              offset={-100}
-            >
-              Gallery
-            </LinkS> */}
-            <Link href={"/gallery"} legacyBehavior>
-              <a>Gallery</a>
-            </Link>
-          </li>
+          {navLinks.map((link, index) => (
+            <li className="mr-4" key={index}>
+              <Link href={link.path} legacyBehavior scroll={false}>
+                <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500}>
+                  {link.title}
+                </LinkS>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
       {/* hamburger menu */}
@@ -87,51 +38,27 @@ const Navbar = (props: Props) => {
         {nav ? <FaTimes /> : <FaBars />}
       </div>
       {/* mobile meunu */}
-      <ul
-        className={
-          !nav
-            ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center"
-        }
-      >
-        <li className="py-2 text-xl">
-          <LinkS
-            activeClass="active"
-            to="work"
-            containerId="work"
-            smooth={true}
-            duration={500}
-          >
-            Home
-          </LinkS>
-        </li>
-        <li className="py-2 text-xl">About</li>
-        <li className="py-2 text-xl">Work</li>
-        <li className="py-2 text-xl">Contact</li>
+      <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center"}>
+        {navLinks.map((link, index) => (
+          <li className="py-4" key={index}>
+            <Link href={link.path} legacyBehavior scroll={false}>
+              <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500}>
+                {link.title}
+              </LinkS>
+            </Link>
+          </li>
+        ))}
 
         {/* social media icons */}
         <div className="py-2">
           <ul className="flex">
-            <li>
-              <Link href={"/"}>
-                <FaFacebook size={30} />
-              </Link>{" "}
-            </li>
-            <li>
-              <Link href={"/"}>
-                <FaInstagram size={30} />
-              </Link>{" "}
-            </li>
-            <li>
-              <Link href={"/"}>
-                <FaTwitter size={30} />
-              </Link>{" "}
-            </li>
-            <li>
-              <Link href={"/"}>
-                <HiOutlineMail size={30} />
-              </Link>{" "}
-            </li>
+            {socialLinks.map((link, index) => (
+              <li key={index}>
+                <Link href={link.path}>
+                  <link.icon size={20} />
+                </Link>{" "}
+              </li>
+            ))}
           </ul>
         </div>
       </ul>
