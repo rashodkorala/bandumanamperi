@@ -11,14 +11,7 @@ function createImage(width, height) {
 
     images.push({
       id: index + "",
-      img:
-        "https://picsum.photos/" +
-        width +
-        "/" +
-        height +
-        "/" +
-        "?random=" +
-        index,
+      img: "https://picsum.photos/" + width + "/" + height + "/" + "?random=" + index,
       width: width,
       height: height,
       view: "desktop",
@@ -59,8 +52,7 @@ const Slider = ({ width, height }) => {
       </div>
       <div
         id="sliderdesktop"
-        className="flex flex-row overflow-x-scroll scroll whitespace-nowrap scroll-smooth snap-mandatory snap-x scrollbar-hide "
-      >
+        className="flex flex-row overflow-x-scroll scroll whitespace-nowrap scroll-smooth snap-mandatory snap-x scrollbar-hide ">
         {/* in mobile view load mobile images
       and in desktop view load desktop images */}
         {imageData.map((image) => (
@@ -68,7 +60,7 @@ const Slider = ({ width, height }) => {
             key={image.id}
             src={image.img}
             alt=""
-            className="transition duration-500 ease-in-out transform snap-center"
+            className="transition duration-500 ease-in-out transform snap-center z-10"
             width={image.width}
             height={image.height}
           />

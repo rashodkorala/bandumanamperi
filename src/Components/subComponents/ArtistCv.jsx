@@ -1,12 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
+import Artist from "../../data/data";
 
 const ArtistCv = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
   return (
-    <div>
-      {isPopupOpen && <div>This is the popup. Add your content here.</div>}
-      <button onClick={() => setIsPopupOpen(true)}>Open Popup</button>
+    <div className="">
+      {Artist.map((cv, index) => {
+        return (
+          <div key={index}>
+            <h1 className="text-[25px] py-3">{cv.heading}</h1>
+            {cv.items.map((item, index) => {
+              return (
+                <div key={index}>
+                  <p className="text-[16px] p-1">
+                    {`${item.year}
+                     ${item.discription}`}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 };
