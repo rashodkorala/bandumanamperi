@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Link as LinkS } from "react-scroll";
 
-import { navLinks, socialLinks } from "../data/navbar";
+import { navLinks, socialLinks } from "../data/linksData";
 
 import React, { useState } from "react";
 import { FaFacebook, FaTimes, FaBars, FaInstagram, FaTwitter } from "react-icons/fa";
