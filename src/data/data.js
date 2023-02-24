@@ -26,7 +26,7 @@ const artistCv = [
     items: [
       {
         year: "2022",
-        discription: "2022 'The Smell': the 4th edition of Theertha Performance Platform 2022, Theertha Red Dot Gallery, Sri Lanka.",
+        discription: "'The Smell': the 4th edition of Theertha Performance Platform 2022, Theertha Red Dot Gallery, Sri Lanka.",
       },
       {
         year: "2022",
@@ -267,6 +267,15 @@ const artistCv = [
       {
         year: "1998",
         discription: "“New Directions”, Mount Castle, Gallery Colombo, Sri Lanka.",
+      },
+    ],
+  },
+  {
+    heading: "Residencies",
+    items: [
+      {
+        year: "2019",
+        discription: "Artist in Residence, Theertha, Colombo, Sri Lanka",
       },
     ],
   },
