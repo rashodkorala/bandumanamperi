@@ -56,8 +56,8 @@ const About = (props: Props) => {
             {isPopupOpen && (
               <div className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-50">
                 <div className="absolute top-0 left-0 w-full h-full bg-white opacity-20 " id="overlay"></div>
-                <div className="w-full max-w-[2000px] max-h-[900px] overflow-scroll mx-auto rounded py-4 text-left px-6 z-10 bg-[#ececec] flexflex-col transition-all duration-100 scale-105 ease-out">
-                  <div className="flex justify-between items-center pb-3 opacity-100" id="header">
+                <div className="w-full max-w-[2000px] h-screen max-h-[900px] overflow-scroll mx-auto rounded py-4 text-left px-6 z-10 bg-[#ececec] flexflex-col transition-all duration-100 scale-105 ease-out">
+                  <div className="flex justify-between items-center p-3  pt-6 opacity-100" id="header">
                     <h1 className="text-2xxl font-bold text-black">Curriculum Vitae</h1>
                     <div
                       className="cursor-pointer z-50"
@@ -69,7 +69,7 @@ const About = (props: Props) => {
                       <FaTimes />
                     </div>
                   </div>
-                  <div className="">
+                  <div className="p-3">
                     <ArtistCv />
                   </div>
                 </div>
