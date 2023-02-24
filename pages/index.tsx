@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   return (
-    <div className="snap-y snap-mandatory flex flex-col gap-[50px] md:gap-0">
+    <div className="snap-y snap-mandatory flex flex-col">
       <Navbar />
       {/* <Main /> */}
       <About />
