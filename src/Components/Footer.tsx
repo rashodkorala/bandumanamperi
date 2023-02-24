@@ -42,7 +42,7 @@ const Footer = (props: Props) => {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col w-full h-full justify-start items-start border-t-2 border-[#c0c0c0ca] col-span-2">
+          <div className="flex flex-col w-full h-full justify-start items-start border-t-2 border-[#c0c0c0ca] col-span-2 md:col-span-1 pb-3">
             <h2 className="text-[14px] font-bold pt-1">CONTACT</h2>
             <ul className="flex flex-col text-[14px] pt-2">
               <p className="px-0 pb-2 text-[19px] font-bold">Bandu Manamperi&apos;s Home & Studio.</p>
@@ -55,7 +55,7 @@ const Footer = (props: Props) => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center w-full border-t-2 border-[#c0c0c0ca] ">
+        <div className="flex flex-col justify-center items-center w-full border-t-2 border-[#c0c0c0ca]">
           <div className="flex flex-col gap-1 justify-center items-center w-full h-full p-2 md:flex-row md:justify-around ">
             <div className="flex gap-2">
               <span className="text-[12px] flex items-center">

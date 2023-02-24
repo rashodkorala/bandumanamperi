@@ -16,7 +16,7 @@ const About = (props: Props) => {
   const image = {
     id: 1,
     src: "/Assets/profile.jpeg",
-    span: "grayscale drop-shadow-xl shadow-2xl md:w-[600px] md:h-[400px]",
+    span: "grayscale drop-shadow-xl shadow-2xl md:w-[400px] md:h-[400px] rounded-full w-[200px] h-[200px]",
     width: 500,
     height: 1500,
   };
@@ -54,10 +54,10 @@ const About = (props: Props) => {
               <HiArrowCircleRight />
             </button>
             {isPopupOpen && (
-              <div className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-50">
-                <div className="absolute top-0 left-0 w-full h-full bg-white opacity-20 " id="overlay"></div>
-                <div className="w-full max-w-[2000px] h-screen max-h-[900px] overflow-scroll mx-auto rounded py-4 text-left px-6 z-10 bg-[#ececec] flexflex-col transition-all duration-100 scale-105 ease-out">
-                  <div className="flex justify-between items-center p-3  pt-6 opacity-100" id="header">
+              <div className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-50 ">
+                <div className="absolute top-0 left-0 w-full h-full bg-white opacity-70" id="overlay"></div>
+                <div className="w-full max-w-[1500px] h-full max-h-[700px] justify-center items-center overflow-scroll mx-auto rounded py-4 text-left px-6 z-10 bg-[#ffffff]">
+                  <div className="flex justify-between items-center p-3 pt-6 opacity-100" id="header">
                     <h1 className="text-2xxl font-bold text-black">Curriculum Vitae</h1>
                     <div
                       className="cursor-pointer z-50"
