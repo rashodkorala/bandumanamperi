@@ -28,7 +28,7 @@ const About = (props: Props) => {
   };
 
   return (
-    <div id="about" className="overflow-hidden  w-full h-screen bg-white snap-always snap-start mt-[50px] md:mt-[0]">
+    <div id="about" className="overflow-hidden  w-full bg-white snap-always snap-start mt-[100px] md:mt-[0]">
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
         <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">About</h1>
         <div className="flex flex-col py-4 gap-3">
@@ -56,11 +56,11 @@ const About = (props: Props) => {
             {isPopupOpen && (
               <div className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-50 ">
                 <div className="absolute top-0 left-0 w-full h-full bg-white opacity-70" id="overlay"></div>
-                <div className="w-full max-w-[1500px] h-full max-h-[700px] justify-center items-center overflow-scroll mx-auto rounded py-4 text-left px-6 z-10 bg-[#ffffff]">
-                  <div className="flex justify-between items-center p-3 pt-6 opacity-100" id="header">
+                <div className="w-full max-w-[1500px] h-full max-h-[700px] justify-center items-center overflow-scroll mx-auto roundedtext-left px-6 z-10 bg-[#ffffff]">
+                  <div className="flex flex-row  bg-white justify-between items-center p-3 pt-6 opacity-100" id="header">
                     <h1 className="text-2xxl font-bold text-black">Curriculum Vitae</h1>
                     <div
-                      className="cursor-pointer z-50"
+                      className="cursor-pointer z-50 "
                       onClick={() => {
                         {
                           setIsPopupOpen(false), setScroll(true), changeNav();
