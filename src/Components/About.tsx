@@ -28,7 +28,7 @@ const About = (props: Props) => {
   };
 
   return (
-    <div id="about" className="overflow-hidden  w-full bg-white snap-always snap-start mt-[100px] md:mt-[0]">
+    <div id="about" className="w-full bg-white snap-always snap-start mt-[100px]">
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
         <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">About</h1>
         <div className="flex flex-col py-4 gap-3">
