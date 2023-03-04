@@ -7,15 +7,14 @@ import Footer from "./Footer";
 
 type Props = {};
 
-const Home = (props: Props) => {
+const Main = (props: Props) => {
   return (
-    <div className="flex flex-col justify-center items-center w-full">
+    <div className="flex flex-col w-full">
       <About />
       <Work />
       <Contact />
-      <Footer />
     </div>
   );
 };
 
-export default Home;
+export default Main;
