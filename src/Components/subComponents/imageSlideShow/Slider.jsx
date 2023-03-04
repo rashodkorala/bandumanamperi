@@ -5,20 +5,20 @@ import { BsDot } from "react-icons/bs";
 const Slider = ({ hoveredSlideIndex, setHoveredSlideIndex }) => {
   const slides = [
     {
-      url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80",
+      url: "/Assets/paintings/thousondEggs.jpg",
     },
     {
-      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
+      url: "/Assets/Preformances/IronMan.jpg",
     },
     {
-      url: "https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80",
+      url: "/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg",
     },
 
     {
-      url: "https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80",
+      url: "/Assets/Preformances/Bandaged_Body_1.jpg",
     },
     {
-      url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80",
+      url: "/Assets/installations_and_Sculptures/numbed.jpg",
     },
   ];
 
@@ -44,7 +44,7 @@ const Slider = ({ hoveredSlideIndex, setHoveredSlideIndex }) => {
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
-    
+
     return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
