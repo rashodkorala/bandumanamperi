@@ -12,7 +12,7 @@ export const navLinks = [
 export const socialLinks = [
   { title: "Twitter", path: "https://twitter.com/yourusername", icon: FaTwitter },
   { title: "Instagram", path: "https://instagram.com/bandumanamperi", icon: FaInstagram },
-  { title: "Facebook", path: "https://linkedin.com/in/yourusername", icon: FaFacebook },
+  { title: "Facebook", path: "https://facebook.com/bandumanamperi", icon: FaFacebook },
 ];
 
 export const contacts = [

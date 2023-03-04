@@ -15,7 +15,7 @@ const Work = (props: Props) => {
           <Slider hoveredSlideIndex={hoveredSlideIndex} setHoveredSlideIndex={setHoveredSlideIndex} />
         </div>
 
-        <div className=" p-2 flex flex-col md:grid md:grid-flow-col md:grid-cols-3 gap-3">
+        <div className=" py-6 p-4 flex flex-col md:grid md:grid-flow-col md:grid-cols-3 gap-3">
           <button className="bg-black text-white rounded-[25px] py-3" onClick={() => setHoveredSlideIndex(1)}>
             Paintings and Drawings
           </button>

@@ -18,7 +18,7 @@ const Slider = ({ hoveredSlideIndex, setHoveredSlideIndex }) => {
       url: "/Assets/Preformances/Bandaged_Body_1.jpg",
     },
     {
-      url: "/Assets/installations_and_Sculptures/numbed.jpg",
+      url: "/Assets/installations_and_Sculptures/Numbed.jpg",
     },
   ];
 
