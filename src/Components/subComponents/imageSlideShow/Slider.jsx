@@ -5,13 +5,13 @@ import { BsDot } from "react-icons/bs";
 const Slider = ({ hoveredSlideIndex, setHoveredSlideIndex }) => {
   const slides = [
     {
+      url: "/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg",
+    },
+    {
       url: "/Assets/paintings/thousondEggs.jpg",
     },
     {
       url: "/Assets/Preformances/IronMan.jpg",
-    },
-    {
-      url: "/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg",
     },
 
     {

@@ -6,8 +6,8 @@ const Work = (props: Props) => {
   const [hoveredSlideIndex, setHoveredSlideIndex] = useState(0);
 
   return (
-    <div id="work" className="w-full bg-white snap-start snap-proximity h-screen items-start">
-      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-start  h-full text-black xsm:px-5">
+    <div id="work" className="w-full bg-white snap-start snap-proximity h-screen">
+      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
         <div className="flex">
           <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">Work</h1>
         </div>
@@ -22,7 +22,7 @@ const Work = (props: Props) => {
           <button className="bg-black text-white rounded-[25px] py-3" onClick={() => setHoveredSlideIndex(2)}>
             Preformances
           </button>
-          <button className="bg-black text-white rounded-[25px] py-3" onClick={() => setHoveredSlideIndex(3)}>
+          <button className="bg-black text-white rounded-[25px] py-3" onClick={() => setHoveredSlideIndex(4)}>
             Sculptures and Installations
           </button>
         </div>
