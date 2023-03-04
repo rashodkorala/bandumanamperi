@@ -14,7 +14,7 @@ const Navbar = (props: Props) => {
   const HandleClick = () => setNav(!nav);
 
   return (
-    <div className=" bg-white fixed w-full h-[80px] flex justify-between items-center px-4 text-black z-50 top-0">
+    <div className=" bg-white w-full h-[50px] sm:h-[80px] flex justify-between items-center px-4 text-black z-50 top-0">
       <div className="z-50">
         <h1>Bandu Manamperi</h1>
         {/* <img src={Logo} alt="logo" style={{ width: "50px" }} /> */}
@@ -23,9 +23,9 @@ const Navbar = (props: Props) => {
       <div className="hidden md:flex">
         <ul className="flex">
           {navLinks.map((link, index) => (
-            <li className="mr-4" key={index}>
-              <Link href={link.path} legacyBehavior scroll={link.title === "Gallery" ? false : true}>
-                <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500} offset={-200}>
+            <li className="py-4" key={index}>
+              <Link href={link.path} legacyBehavior scroll={link.scroll}>
+                <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500} offset={link.offset}>
                   {link.title}
                 </LinkS>
               </Link>
@@ -41,8 +41,8 @@ const Navbar = (props: Props) => {
       <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center z-10"}>
         {navLinks.map((link, index) => (
           <li className="py-4" key={index}>
-            <Link href={link.path} legacyBehavior scroll={false}>
-              <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500} onClick={HandleClick}>
+            <Link href={link.path} legacyBehavior scroll={link.scroll}>
+              <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500} onClick={HandleClick} offset={link.offset}>
                 {link.title}
               </LinkS>
             </Link>

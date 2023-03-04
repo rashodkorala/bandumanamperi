@@ -16,9 +16,9 @@ const About = (props: Props) => {
   const image = {
     id: 1,
     src: "/Assets/profile.jpeg",
-    span: "grayscale drop-shadow-xl shadow-2xl md:w-[400px] md:h-[400px] rounded-full w-[200px] h-[200px]",
+    span: "grayscale drop-shadow-xl shadow-2xl w-[200px] h-[200px] rounded-full",
     width: 500,
-    height: 1500,
+    height: 1200,
   };
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [scroll, setScroll] = useState(true);
@@ -28,8 +28,8 @@ const About = (props: Props) => {
   };
 
   return (
-    <div id="about" className="w-full bg-white snap-always snap-start mt-[100px]">
-      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
+    <div id="about" className="w-full bg-white md:h-screen justify-center items-center">
+      <div className="max-w-[1000px] mx-auto px-4 flex flex-col h-full justify-center text-black xsm:px-5">
         <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">About</h1>
         <div className="flex flex-col py-4 gap-3">
           <div className="">
