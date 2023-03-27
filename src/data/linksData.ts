@@ -3,7 +3,7 @@ import { FaFacebook, FaPhoneAlt, FaInstagram, FaTwitter, FaMapMarkerAlt } from "
 import { HiOutlineMail } from "react-icons/hi";
 
 export const navLinks = [
-  { title: "About", path: "/#about", scrollTo: "about", offset: -200, scroll: false },
+  { title: "About", path: "/", scrollTo: "about", offset: -200, scroll: false },
   { title: "Work", path: "/#work", scrollTo: "work", offset: -50, scroll: false },
   { title: "Contact", path: "/#contact", scrollTo: "contact", offset: 0, scroll: false },
   { title: "Gallery", path: "/gallery", scrollTo: "", offset: 0, scroll: true },
