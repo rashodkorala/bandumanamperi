@@ -3,7 +3,6 @@ import Contact from "./Contact";
 
 import About from "./About";
 import Work from "./Work";
-import Footer from "./Footer";
 
 type Props = {};
 

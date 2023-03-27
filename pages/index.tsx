@@ -1,6 +1,4 @@
-import Main from "../src/Components/Home";
-
-import { useRouter } from "next/router";
+import Main from "../src/Components/Main";
 
 export default function Home() {
   return (
