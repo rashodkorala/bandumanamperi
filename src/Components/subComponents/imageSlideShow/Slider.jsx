@@ -2,26 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { BsDot } from "react-icons/bs";
 
-const Slider = ({ hoveredSlideIndex, setHoveredSlideIndex }) => {
-  const slides = [
-    {
-      url: "/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg",
-    },
-    {
-      url: "/Assets/paintings/thousondEggs.jpg",
-    },
-    {
-      url: "/Assets/Preformances/IronMan.jpg",
-    },
-
-    {
-      url: "/Assets/Preformances/Bandaged_Body_1.jpg",
-    },
-    {
-      url: "/Assets/installations_and_Sculptures/Numbed.jpg",
-    },
-  ];
-
+const Slider = ({ hoveredSlideIndex, setHoveredSlideIndex, slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
