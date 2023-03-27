@@ -24,24 +24,20 @@ const PaintingMain = (props: Props) => {
     },
   ];
   return (
-    <div className="w-full  text-black flex flex-col p-6 pt-16">
-      <div className="p-3">
-        <h1 className="text-3xl text-black text-center font-bold">Paintings</h1>
-        <p className="p-5 px-[35px]">
+    <div className="w-full h-screen text-black flex flex-col md:pt-16 max-w-[1000px] mx-auto justify-center items-center">
+      <div className="p-4 flex flex-col items-center justify-center">
+        <h1 className="text-3xl xl:text-[50px] text-black text-center font-bold">Paintings</h1>
+        <p className="py-3 text-[14px] xsm:text-md xl:text-xl text-center font-light max-w-[700px]">
           Explore the rich and deeply personal artworks of Bandu Manamperi on this page. Through his use of shapes and patterns, he explores
           the themes of memory and transformation in a deeply personal way. Each painting is a study in balance, harmony, and the ways in
           which external events can shape our individual experiences. Take a moment to browse through the gallery and discover the beauty
           and depth of Bandu&apos;s art.
         </p>
       </div>
-      <div className="flex flex-col items-center">
-        <div className="w-full">
-          <Slider setHoveredSlideIndex={0} hoveredSlideIndex={0} slides={slides} />
-        </div>
-        <div>
-          <Gallery />
-        </div>
+      <div className="flex flex-col w-full justify-center items-center">
+        <Slider setHoveredSlideIndex={0} hoveredSlideIndex={0} slides={slides} />
       </div>
+      <div>{/* <Gallery /> */}</div>
     </div>
   );
 };
