@@ -10,14 +10,7 @@ function createImage() {
 
     images.push({
       id: index + "",
-      src:
-        "https://picsum.photos/" +
-        width +
-        "/" +
-        height +
-        "/" +
-        "?random=" +
-        index,
+      src: "https://picsum.photos/" + width + "/" + height + "/" + "?random=" + index,
       span: "cols-span-" + Math.floor(Math.random() * 2 + 1),
       width: width,
       height: height,
@@ -33,18 +26,11 @@ const Gallery = (props: Props) => {
   return (
     <div id="gallery" className="w-full bg-white">
       <div className="max-w-[1300px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
-        <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">Gallery</h1>
+        
         <div className="columns-3 gap-3 mx-auto space-y-3 py-28">
           {images.map((image) => (
             <div key={image.id} className="break-inside-avoid">
-              <Image
-                key={image.id}
-                src={image.src}
-                alt="image"
-                className={image.span}
-                width={image.width}
-                height={image.height}
-              />
+              <Image key={image.id} src={image.src} alt="image" className={image.span} width={image.width} height={image.height} />
             </div>
           ))}
         </div>
