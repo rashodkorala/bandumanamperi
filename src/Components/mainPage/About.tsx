@@ -3,7 +3,7 @@ import { HiArrowCircleLeft, HiArrowCircleRight } from "react-icons/hi";
 
 //import x icon from react-icons
 import { FaTimes } from "react-icons/fa";
-import ArtistCv from "./subComponents/ArtistCv.jsx";
+import ArtistCv from "../subComponents/ArtistCv.jsx";
 
 import Image from "next/image";
 import Link from "next/link";

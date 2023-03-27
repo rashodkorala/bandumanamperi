@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Slider from "./subComponents/imageSlideShow/Slider";
+import Slider from "./../subComponents/imageSlideShow/Slider";
 
 type Props = {};
 const Work = (props: Props) => {

@@ -1,8 +1,8 @@
 import React from "react";
-import Contact from "./Contact";
+import Contact from "./mainPage/Contact";
 
-import About from "./About";
-import Work from "./Work";
+import About from "./mainPage/About";
+import Work from "./mainPage/Work";
 
 type Props = {};
 
