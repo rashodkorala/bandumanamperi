@@ -14,7 +14,7 @@ const Navbar = (props: Props) => {
   const HandleClick = () => setNav(!nav);
 
   return (
-    <div className=" bg-white w-full h-[50px] sm:h-[80px] flex justify-between items-center px-4 text-black z-50 top-0">
+    <div className="fixed bg-white w-full h-[50px] sm:h-[80px] flex justify-between items-center px-4 text-black z-50 top-0">
       <div className="z-50">
         <h1>Bandu Manamperi</h1>
         {/* <img src={Logo} alt="logo" style={{ width: "50px" }} /> */}
