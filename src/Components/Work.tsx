@@ -6,8 +6,8 @@ const Work = (props: Props) => {
   const [hoveredSlideIndex, setHoveredSlideIndex] = useState(0);
 
   return (
-    <div id="work" className="w-full bg-white snap-start">
-      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center text-black xsm:px-5">
+    <div id="work" className="w-ful snap-start p-5">
+      <div className="max-w-[1000px] mx-auto px-5  text-black">
         <div className="flex">
           <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">Work</h1>
         </div>
