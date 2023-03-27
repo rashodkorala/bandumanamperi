@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { HiArrowCircleLeft, HiArrowCircleRight } from "react-icons/hi";
 
 //import x icon from react-icons
@@ -21,14 +21,9 @@ const About = (props: Props) => {
     height: 1200,
   };
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [scroll, setScroll] = useState(true);
-
-  const changeNav = () => {
-    scroll ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "scroll");
-  };
 
   return (
-    <div id="about" className="w-full bg-white md:h-screen justify-center items-center">
+    <div id="about" className="w-full bg-white md:h-screen justify-center items-center flex flex-col">
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col h-full justify-center text-black xsm:px-5">
         <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">About</h1>
         <div className="flex flex-col py-4 gap-3">
@@ -48,7 +43,7 @@ const About = (props: Props) => {
             <button
               className="flex text-md hover:scale-110 transition-all duration-1000 ease-in-out bg-black w-[100px] md:w-[120px] text-white rounded-[45px] px-2 py-1 md:px-4 md:py-2 items-center justify-center"
               onClick={() => {
-                setIsPopupOpen(true), setScroll(false);
+                setIsPopupOpen(true);
               }}>
               View CV
               <HiArrowCircleRight />
@@ -63,7 +58,7 @@ const About = (props: Props) => {
                       className="cursor-pointer z-50 "
                       onClick={() => {
                         {
-                          setIsPopupOpen(false), setScroll(true), changeNav();
+                          setIsPopupOpen(false);
                         }
                       }}>
                       <FaTimes />
