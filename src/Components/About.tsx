@@ -24,7 +24,7 @@ const About = (props: Props) => {
 
   return (
     <div id="about" className="w-full bg-white md:h-screen justify-center items-center flex flex-col">
-      <div className="max-w-[1000px] mx-auto px-4 flex flex-col h-full justify-center text-black xsm:px-5">
+      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center text-black xsm:px-5">
         <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">About</h1>
         <div className="flex flex-col py-4 gap-3">
           <div className="">

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   return (
-    <div className="flex flex-col mt-[100px] md:mt-[0px]">
+    <div className="flex flex-col mt-[50px] md:mt-[0px]">
       <Main />
     </div>
   );

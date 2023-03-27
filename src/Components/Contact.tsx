@@ -5,7 +5,7 @@ type Props = {};
 const Contact = (props: Props) => {
   return (
     <div id="contact" className="w-full bg-white snap-center snap-always p-4 flex items-center">
-      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center items-center  text-black xsm:px-5 bg-blue-50">
+      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center items-center  text-black xsm:px-5">
         <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl text-left w-full">Contact</h1>
         <form
           action="https://getform.io/f/b61520b6-64ed-4215-8bae-b9969500dd78"
