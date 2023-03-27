@@ -9,7 +9,7 @@ type Props = {};
 
 const Main = (props: Props) => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col">
       <About />
       <Work />
       <Contact />
