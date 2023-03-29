@@ -40,10 +40,10 @@ const Work = (props: Props) => {
             <Link href="/paintings">Paintings and Drawings</Link>
           </button>
           <button className="bg-black text-white rounded-[25px] py-3" onClick={() => setHoveredSlideIndex(2)}>
-            Preformances
+            <Link href="/preformances">Preformances</Link>
           </button>
           <button className="bg-black text-white rounded-[25px] py-3" onClick={() => setHoveredSlideIndex(4)}>
-            Sculptures and Installations
+            <Link href="/sculptures">Sculptures and Installations</Link>
           </button>
         </div>
       </div>

@@ -1,0 +1,30 @@
+import React from "react";
+
+type Props = {};
+
+function PreformanceMain({}: Props) {
+  return (
+    <div className="w-full text-black flex flex-col md:pt-16 justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
+        <div className="w-full h-[100vh] flex flex-col">
+          {/* <div className="absolute w-[100%] h-[100%] bg-black opacity-70" id="overlay"></div> */}
+          <video src={"/Assets/Preformances/videoBg.mp4"} className="w-full h-full object-cover brightness-50" autoPlay loop muted />
+          <div className="absolute w-[100%] h-[100%] top-[5%] flex flex-col justify-center items-start text-white p-6 max-w-[1000px]">
+            <h1 className="text-3xl xl:text-[50px] text-white text-left font-bold leading-10">Preformances</h1>
+            <p className="py-6 text-[12px] xsm:text-md xl:text-xl text-left font-light max-w-[1200px]">
+              Bandu Manamperi is an artist who uses performance as a powerful medium to explore complex social and political issues in Sri
+              Lanka. His performances are known for their thought-provoking nature and their ability to evoke strong emotional responses
+              from audiences. Through his work, Manamperi seeks to challenge prevailing attitudes and provoke critical reflection on
+              pressing social issues such as war, globalization, and cultural commodification. He uses his artistic practice to engage with
+              audiences, raising awareness and promoting dialogue about these important issues. Manamperi&apos;s performances are an
+              essential part of his artistic practice, helping him to communicate his ideas and engage with his audience in meaningful ways.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>{/* <Gallery /> */}</div>
+    </div>
+  );
+}
+
+export default PreformanceMain;
