@@ -9,7 +9,7 @@ function PreformanceMain({}: Props) {
         <div className="w-full h-[100vh] flex flex-col">
           {/* <div className="absolute w-[100%] h-[100%] bg-black opacity-70" id="overlay"></div> */}
           <video src={"/Assets/Preformances/videoBg.mp4"} className="w-full h-full object-cover brightness-50" autoPlay loop muted />
-          <div className="absolute w-[100%] h-[100%] top-[5%] flex flex-col justify-center items-start text-white p-6 max-w-[1000px]">
+          <div className="absolute w-[100%] h-[100%] top-[5%] left-0 flex flex-col justify-center items-start text-white p-6 max-w-[1000px]">
             <h1 className="text-3xl xl:text-[50px] text-white text-left font-bold leading-10">Preformances</h1>
             <p className="py-6 text-[12px] xsm:text-md xl:text-xl text-left font-light max-w-[1200px]">
               Bandu Manamperi is an artist who uses performance as a powerful medium to explore complex social and political issues in Sri
