@@ -10,7 +10,7 @@ function PreformanceMain({}: Props) {
           {/* <div className="absolute w-[100%] h-[100%] bg-black opacity-70" id="overlay"></div> */}
           <div className="w-full h-[70vh]">
             <video
-              src={"/Assets/Preformances/videoBg.mp4"}
+              src={"/Assets/Preformances/tpp2022.mp4"}
               className=" w-full h-full object-cover brightness-50"
               autoPlay
               loop
