@@ -1,6 +1,28 @@
 import React from "react";
 import Gallery from "../Gallery";
 import Slider from "../subComponents/imageSlideShow/Slider";
+/* import Timeline, { TimelineEvent } from "./Timeline";
+
+const events: TimelineEvent[] = [
+  {
+    date: "2022-01-01",
+    title: "Solo exhibition",
+    description: "My first solo exhibition at the XYZ gallery",
+    image: "/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg",
+  },
+  {
+    date: "2022-05-15",
+    title: "Group exhibition",
+    description: "Group exhibition featuring my latest artwork",
+    image: "/Assets/paintings/thousondEggs.jpg",
+  },
+  {
+    date: "2023-02-01",
+    title: "Art award",
+    description: "Recipient of the prestigious XYZ art award",
+    image: "/Assets/Preformances/IronMan.jpg",
+  },
+]; */
 
 type Props = {};
 
@@ -24,7 +46,7 @@ const PaintingMain = (props: Props) => {
     },
   ];
   return (
-    <div className="w-full h-screen text-black flex flex-col md:pt-16 max-w-[1000px] mx-auto justify-center items-center">
+    <div className="w-full text-black flex flex-col md:pt-16 max-w-[1000px] mx-auto justify-center items-center">
       <div className="p-4 flex flex-col items-center justify-center">
         <h1 className="text-3xl xl:text-[50px] text-black text-center font-bold">Paintings</h1>
         <p className="py-3 text-[14px] xsm:text-md xl:text-xl text-center font-light max-w-[700px]">
@@ -37,7 +59,9 @@ const PaintingMain = (props: Props) => {
       <div className="flex flex-col w-full justify-center items-center">
         <Slider setHoveredSlideIndex={0} hoveredSlideIndex={0} slides={slides} />
       </div>
-      <div>{/* <Gallery /> */}</div>
+      {/* <div>
+        <Timeline events={events} />
+      // </div> */}
     </div>
   );
 };
