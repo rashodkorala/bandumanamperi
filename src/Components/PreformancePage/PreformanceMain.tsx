@@ -16,6 +16,7 @@ function PreformanceMain({}: Props) {
               loop
               muted
               playsInline
+              
             />
           </div>
           <div className="md:absolute w-[100%] h-[100%] top-[-2%] left-0 flex flex-col justify-center items-start text-black md:text-white p-6 max-w-[1000px]">
