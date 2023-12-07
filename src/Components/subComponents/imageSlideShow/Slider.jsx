@@ -35,16 +35,16 @@ const Slider = ({ hoveredSlideIndex, setHoveredSlideIndex, slides }) => {
   }, [hoveredSlideIndex]);
 
   return (
-    <div className="max-w-[1400px] h-[400px] md:h-[530px] lg:h-[580px] w-full m-auto py-5 px-4 relative group">
+    <div className="max-w-[1500px] mx-auto h-[450px] md:h-[526px] lg:h-[615px] xl:h-[720px] 2xl:h-[840px] w-full py-5 relative group">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-full h-full rounded-2xl bg-center bg-cover duration-500"></div>
+        className="w-full h-full rounded-2xl bg-center bg-cover md:bg-blend-normal duration-500"></div>
       {/* Left Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
       {/* Right Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
       <div className="flex top-4 justify-center py-2">

@@ -22,7 +22,7 @@ export const contacts = [
     class: "px-0 pb-1 gap-1 flex items-center",
     path: "mailto:bandumanamperi@yahoo.com",
     icon: HiOutlineMail,
-    iconSize: 15,
+    iconSize: "18",
     desc: "bandumanamperi@yahoo.com",
   },
   {
@@ -30,15 +30,15 @@ export const contacts = [
     class: "px-0 pb-1 gap-1 flex items-center",
     path: "tel:+94773672789",
     icon: FaPhoneAlt,
-    iconSize: 15,
+    iconSize: "18",
     desc: "+94773672789",
   },
   {
     title: "Address",
     class: "px-0 pb-1 gap-1 flex items-center",
-    path: "https://goo.gl/maps/1Q9Z9Z9Z9Z9Z9Z9Z9",
+    path: "https://maps.app.goo.gl/xd3rAjtRwsiPgE2HA",
     icon: FaMapMarkerAlt,
-    iconSize: 25,
+    iconSize: "25",
     desc: "67A1,Ihalawatta Delgaswatta Temple Road , Weedagama, Bandaragama , Western Province , Sri Lanka",
   },
 ];

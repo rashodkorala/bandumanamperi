@@ -16,22 +16,22 @@ const About = (props: Props) => {
   const image = {
     id: 1,
     src: "/Assets/profile.jpeg",
-    span: "grayscale drop-shadow-xl shadow-2xl w-[200px] h-[200px] rounded-full",
+    span: "grayscale drop-shadow-xl shadow-2xl w-[200px] h-[200px] xl:w-[400px] xl:h-[400px] rounded-full",
     width: 500,
     height: 1200,
   };
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
-    <div id="about" className="w-full bg-white md:h-screen justify-center items-center flex flex-col">
-      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center text-black xsm:px-5">
-        <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl">About</h1>
+    <div id="about" className="w-full h-full bg-white md:h-screen justify-center items-center flex flex-col">
+      <div className="max-w-[1900px] mx-auto px-4 flex flex-col justify-center text-black xsm:px-5">
+        <h1 className="font-bold text-[40px] md:text-[47px] lg:text-[54px] xl:text-[63px]">About</h1>
         <div className="flex flex-col py-4 gap-3">
           <div className="">
             <Image key={image.id} src={image.src} alt="image" className={image.span} width={image.width} height={image.height} />
           </div>
           <div>
-            <p className="py-4 text-[13px] xsm:text-md xl:text-2xl text-left font-light ">
+            <p className="py-4 text-[15px] sm:text-[18px] md:text-[21px]  lg:text-[24px] xl:text-[28px] ztext-left font-light ">
               <strong className="font-bold">Bandu Manamperi</strong> is a renowned artist who holds a BFA in sculpture and is a part of
               Colombo&apos;s Theertha Artists&apos; Collective. He is a pioneer of performance art in Sri Lanka and continues to be an
               influential figure in the field. He creates deeply personal artworks that focus on the transformation of his own body, while

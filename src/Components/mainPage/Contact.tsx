@@ -1,36 +1,38 @@
 import React from "react";
 
 const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+import { navLinks, socialLinks, contacts } from "../../data/linksData";
+import Link from "next/link";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full bg-white snap-center snap-always p-4 flex items-center">
-      <div className="mx-auto px-4 flex flex-col md:flex-row justify-center items-center text-black xsm:px-5 gap-8">
-        {/* Contact Information Column */}
-        <div className="md:w-1/3 flex flex-col justify-center items-start">
-          <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl text-left mb-4">Contact</h1>
-          <p className="text-xl mb-2"><strong>Phone:</strong><a href="tel:+94773672789" className="text-xl mb-2 hover:text-gray-500">
-             +94 773672789
-          </a></p> 
-         <p className="text-xl mb-2"> <strong>Email:</strong> <a href="mailto:bandumanamperi@yahoo.com" className="text-xl mb-2 hover:text-gray-500">
-            bandumanamperi@yahoo.com
-          </a></p>
-          <a className="text-xl mb-2">
-            <strong>Address:</strong> 67A1, Ihalawatta, Delgaswatta Temple Road, Weedagama, Bandaragama
-          </a>
-        </div>
+    <div id="contact" className="w-full h-full md:h-screen bg-white snap-center snap-always p-4 flex items-center justify-center">
+      <div className="max-w-[1900px] w-full xsm:h-[80vh] md:h-[50vh] xl:h-[32vh] flex flex-col md:flex-row justify-center items-center text-black xsm:px-5 gap-8">
+        {/* Contact Info Column */}
+        <div className="w-full h-full justify-start items-start flex ">
+          <div className="flex flex-col gap-2">
+            <h1 className="font-bold text-[40px]  md:text-[47px] lg:text-[54px] xl:text-[63px]">Contact</h1>
+            <div className="p-2">
+            <p className="px-0 pb-2 text-[25px] md:text-[30px] lg:text-[35px] xl:text-[40px] font-bold">Bandu Manamperi&apos;s Home & Studio</p>
+            {contacts.map((contact, index) => (
+                <Link href={contact.path} className={"px-0 pb-1 gap-1 flex items-center text-[18px] md:text-[21px] lg:text-[25px] xl:text-[30px] "} key={index}>
+                  <contact.icon size={contact.iconSize} className="mr-1" />
+                  {contact.desc}
+                </Link>
+              ))}
+            </div>
+          </div>
+       </div>
 
         {/* Google Maps Column */}
-        <div className="md:w-[500px] flex">
+        <div className="w-full h-full shadow-2xl border-white border-[1px] bg-slate-900">
           <iframe
-            className="w-full"
-            style={{ height: '500px' }}
+            className="w-full h-full"
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
             src={`https://www.google.com/maps/embed/v1/search?q=Bandu%20Manamperi's%20Home%20%26%20Studio&key=${googleMapsApiKey}`}
-
-            >
+          >
           </iframe>
         </div>
       </div>
