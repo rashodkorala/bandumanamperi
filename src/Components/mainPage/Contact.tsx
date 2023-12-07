@@ -9,15 +9,15 @@ const Contact = () => {
         {/* Contact Information Column */}
         <div className="md:w-1/3 flex flex-col justify-center items-start">
           <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl text-left mb-4">Contact</h1>
-          <p><strong>Phone:</strong><a href="tel:+94773672789" className="text-xl mb-2 hover:text-blue-600">
+          <p className="text-xl mb-2"><strong>Phone:</strong><a href="tel:+94773672789" className="text-xl mb-2 hover:text-gray-500">
              +94 773672789
           </a></p> 
-         <p> <strong>Email:</strong> <a href="mailto:bandumanamperi@yahoo.com" className="text-xl mb-2 hover:text-blue-600">
+         <p className="text-xl mb-2"> <strong>Email:</strong> <a href="mailto:bandumanamperi@yahoo.com" className="text-xl mb-2 hover:text-gray-500">
             bandumanamperi@yahoo.com
           </a></p>
-          <p className="text-xl mb-2">
+          <a className="text-xl mb-2">
             <strong>Address:</strong> 67A1, Ihalawatta, Delgaswatta Temple Road, Weedagama, Bandaragama
-          </p>
+          </a>
         </div>
 
         {/* Google Maps Column */}
