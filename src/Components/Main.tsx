@@ -1,18 +1,39 @@
-import React from "react";
-import Contact from "./mainPage/Contact";
+import React, { useState, useEffect } from 'react';
+import { TailSpin } from 'react-loader-spinner';
+import Contact from './mainPage/Contact';
+import About from './mainPage/About';
+import Work from './mainPage/Work';
 
-import About from "./mainPage/About";
-import Work from "./mainPage/Work";
+const Main = () => {
+  const [isLoading, setIsLoading] = useState(true);
 
-type Props = {};
+  useEffect(() => {
+    // Simulate a loading process, or replace with actual loading logic
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Adjust time as needed
 
-const Main = (props: Props) => {
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="flex flex-col gap-[45px]">
-      <About />
-      <Work />
-      <Contact />
-    </div>
+    <>
+      {/* Loading Screen */}
+      {isLoading && (
+        <div className="fixed inset-0 z-50 flex justify-center items-center bg-white">
+          <TailSpin color="#000" height={80} width={80} />
+        </div>
+      )}
+
+      {/* Main Content */}
+      {!isLoading && (
+        <div className="flex flex-col gap-[45px]">
+          <About />
+          <Work />
+          <Contact />
+        </div>
+      )}
+    </>
   );
 };
 

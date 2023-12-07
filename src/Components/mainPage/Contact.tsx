@@ -1,38 +1,38 @@
 import React from "react";
 
-type Props = {};
+const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-const Contact = (props: Props) => {
+const Contact = () => {
   return (
     <div id="contact" className="w-full bg-white snap-center snap-always p-4 flex items-center">
-      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center items-center  text-black xsm:px-5">
-        <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl text-left w-full">Contact</h1>
-        <form
-          action="https://getform.io/f/b61520b6-64ed-4215-8bae-b9969500dd78"
-          method="POST"
-          className="flex flex-col max-w-[600px] w-full p-8 bg-bg"
-          autoComplete="off">
-          <div className="text-md">
-            <input
-              className="my-4 bg-bg p-2 w-full border-b border-black focus:outline-none focus:border-blue-500 "
-              type="text"
-              placeholder="Name"
-              name="name"
-            />
-            <input
-              className="my-4 bg-bg p-2 w-full border-b border-black focus:outline-none focus:border-blue-500"
-              type="email"
-              placeholder="Email"
-              name="email"
-            />
-            <textarea
-              className="my-4 bg-bg p-2 w-full border border-black focus:outline-none focus:border-blue-500"
-              placeholder="Message"
-              name="message"
-              rows={10}></textarea>
-            <button className="bg-black border-2 border-black rounded-[40px] px-8 py-2 text-white">Submit</button>
-          </div>
-        </form>
+      <div className="mx-auto px-4 flex flex-col md:flex-row justify-center items-center text-black xsm:px-5 gap-8">
+        {/* Contact Information Column */}
+        <div className="md:w-1/3 flex flex-col justify-center items-start">
+          <h1 className="font-bold text-3xl xsm:text-4xl sm:text-5xl text-left mb-4">Contact</h1>
+          <p><strong>Phone:</strong><a href="tel:+94773672789" className="text-xl mb-2 hover:text-blue-600">
+             +94 773672789
+          </a></p> 
+         <p> <strong>Email:</strong> <a href="mailto:bandumanamperi@yahoo.com" className="text-xl mb-2 hover:text-blue-600">
+            bandumanamperi@yahoo.com
+          </a></p>
+          <p className="text-xl mb-2">
+            <strong>Address:</strong> 67A1, Ihalawatta, Delgaswatta Temple Road, Weedagama, Bandaragama
+          </p>
+        </div>
+
+        {/* Google Maps Column */}
+        <div className="md:w-[500px] flex">
+          <iframe
+            className="w-full"
+            style={{ height: '500px' }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps/embed/v1/search?q=Bandu%20Manamperi's%20Home%20%26%20Studio&key=${googleMapsApiKey}`}
+
+            >
+          </iframe>
+        </div>
       </div>
     </div>
   );
