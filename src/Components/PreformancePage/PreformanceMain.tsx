@@ -28,9 +28,9 @@ function PreformanceMain() {
         />
 
         {/* Absolute positioned text for md screens and up */}
-        <div className="md:absolute bottom-0 mb-1 w-full flex flex-col justify-center items-baseline text-black md:text-white p-6 max-w-[1920px]">
+        <div className="xl:absolute bottom-0 mb-1 w-full flex flex-col justify-center items-baseline text-black xl:text-white p-6 max-w-[1920px]">
           <h1 className="sm:text-[40px]px md:text-[50px] xl:text-[60px] text-left font-bold leading-10">Performances</h1>
-          <p className="py-6 xxsm:text-[10px] xsm:text-[17px] md:text-[20px] xl:text-[24px] text-left font-light max-w-[1280px]">
+          <p className="py-6 xxsm:text-[10px] xsm:text-[17px] md:text-[20px] xl:text-[24px] text-left font-light max-w-[1200px]">
             Bandu Manamperi is an artist who uses performance as a powerful medium to explore complex social and political issues in Sri
             Lanka. His performances are known for their thought-provoking nature and their ability to evoke strong emotional responses
             from audiences. Through his work, Manamperi seeks to challenge prevailing attitudes and provoke critical reflection on
