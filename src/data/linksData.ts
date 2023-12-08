@@ -1,4 +1,3 @@
-import { icons } from "react-icons";
 import { FaFacebook, FaPhoneAlt, FaInstagram, FaTwitter, FaMapMarkerAlt } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
