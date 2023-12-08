@@ -2,9 +2,25 @@ import React, { useState } from "react";
 import { Link as Links } from "react-scroll";
 import Link from "next/link";
 import Slider from "./../subComponents/imageSlideShow/Slider";
+import { useRouter } from 'next/router';
 
 type Props = {};
 const Work = (props: Props) => {
+  const router = useRouter();
+
+  const handlePaintingsClick = () => {
+    router.push('/paintings');
+};
+
+const handlePerformancesClick = () => {
+    router.push('/preformances');
+};
+
+const handleSculpturesClick = () => {
+    router.push('/sculptures');
+};
+
+
   const slides = [
     {
       url: "/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg",
@@ -36,15 +52,16 @@ const Work = (props: Props) => {
         </div>
 
         <div className="py-6 p-6 flex flex-col md:grid md:grid-flow-col md:grid-cols-3 gap-3">
-          <button className="bg-black text-white rounded-[25px] p-3">
-            <Link href="/paintings">Paintings and Drawings</Link>
-          </button>
-          <button className="bg-black text-white rounded-[25px] p-3">
-            <Link href="/preformances">Preformances</Link>
-          </button>
-          <button className="bg-black text-white rounded-[25px] p-3">
-            <Link href="/sculptures">Sculptures and Installations</Link>
-          </button>
+        <button className="bg-black text-white rounded-[25px] p-3" onClick={handlePaintingsClick}>
+    <Link href="/paintings">Paintings and Drawings</Link>
+</button>
+<button className="bg-black text-white rounded-[25px] p-3" onClick={handlePerformancesClick}>
+    <Link href="/preformances">Preformances</Link>
+</button>
+<button className="bg-black text-white rounded-[25px] p-3" onClick={handleSculpturesClick}>
+    <Link href="/sculptures">Sculptures and Installations</Link>
+</button>
+
         </div>
       </div>
     </div>
