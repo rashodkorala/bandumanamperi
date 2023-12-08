@@ -1,10 +1,15 @@
-import React from "react";
-
-const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+import React, { useState } from "react";
 import { navLinks, socialLinks, contacts } from "../../data/linksData";
 import Link from "next/link";
 
 const Contact = () => {
+  const [isMapLoading, setIsMapLoading] = useState(true);
+  const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
+  const handleMapLoad = () => {
+    setIsMapLoading(false);
+  };
+
   return (
     <div id="contact" className="w-full h-full md:h-screen bg-white snap-center snap-always p-4 flex items-center justify-center">
       <div className="max-w-[1900px] w-full xsm:h-[80vh] md:h-[50vh] xl:h-[32vh] flex flex-col md:flex-row justify-center items-center text-black xsm:px-5 gap-8">
@@ -22,18 +27,24 @@ const Contact = () => {
               ))}
             </div>
           </div>
-       </div>
+        </div>
 
         {/* Google Maps Column */}
-        <div className="w-full h-full shadow-2xl border-white border-[1px] bg-slate-900">
+        <div className="w-full h-full shadow-2xl border-white border-[1px]  relative">
+          {isMapLoading && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              {/* Tailwind CSS Spinner (customize as needed) */}
+              <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-black "></div>
+            </div>
+          )}
           <iframe
             className="w-full h-full"
-            loading="lazy"
+            title="Google Maps"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
             src={`https://www.google.com/maps/embed/v1/search?q=Bandu%20Manamperi's%20Home%20%26%20Studio&key=${googleMapsApiKey}`}
-          >
-          </iframe>
+            onLoad={handleMapLoad}
+          />
         </div>
       </div>
     </div>

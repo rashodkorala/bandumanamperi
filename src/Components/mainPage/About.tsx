@@ -33,7 +33,7 @@ const About = (props: Props) => {
           <div>
             <p className="py-4 text-[15px] sm:text-[18px] md:text-[21px]  lg:text-[24px] xl:text-[28px] ztext-left font-light ">
               <strong className="font-bold">Bandu Manamperi</strong> is a renowned artist who holds a BFA in sculpture and is a part of
-              Colombo&apos;s Theertha Artists&apos; Collective. He is a pioneer of performance art in Sri Lanka and continues to be an
+              Theertha International Artists&apos; Collective, Sri Lanka. He is a pioneer of performance art in Sri Lanka and continues to be an
               influential figure in the field. He creates deeply personal artworks that focus on the transformation of his own body, while
               also working in other mediums such as sculpture, drawing, painting, and installation. He frequently lectures and consults on
               various topics such as contemporary art, performance, museology, and traditional craft techniques. His art practice explores
