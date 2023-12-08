@@ -50,11 +50,11 @@ const Contact = () => {
         
       </div>
       {/* Underdevelopment Section */}
-    <div className="text-center mt-8 flex flex-col items-center justify-center max-w-[50%]">
-      <p className="text-lg md:text-xl lg:text-2xl font-medium mb-4">
+    <div className="text-center mt-8 flex flex-col items-center justify-center w-full md:max-w-[60%]">
+      <p className="text-sm md:text-xl lg:text-2xl font-bold mb-4 w-full">
         This website is currently under development and testing. We appreciate your patience and feedback during this phase.
       </p>
-      <button className="bg-black text-white rounded-[25px] p-3 flex items-center justify-center gap-2">
+      <button className="bg-black text-white rounded-[25px] p-3 flex items-center justify-center gap-2 text-[10px]">
         <MdEmail size={24} />
         <a href="mailto:rashodkorala2002@gmail.com">Contact Development Team</a>
       </button>
