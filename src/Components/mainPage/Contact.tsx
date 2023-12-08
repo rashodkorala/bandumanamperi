@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { navLinks, socialLinks, contacts } from "../../data/linksData";
 import Link from "next/link";
+import { MdEmail } from 'react-icons/md';
 
 const Contact = () => {
   const [isMapLoading, setIsMapLoading] = useState(true);
@@ -11,7 +12,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="w-full h-full md:h-screen bg-white snap-center snap-always p-4 flex items-center justify-center">
+    <div id="contact" className="w-full h-full md:h-screen bg-white snap-center snap-always p-4 flex flex-col items-center justify-evenly">
       <div className="max-w-[1900px] w-full xsm:h-[80vh] md:h-[50vh] xl:h-[32vh] flex flex-col md:flex-row justify-center items-center text-black xsm:px-5 gap-8">
         {/* Contact Info Column */}
         <div className="w-full h-full justify-start items-start flex ">
@@ -46,7 +47,18 @@ const Contact = () => {
             onLoad={handleMapLoad}
           />
         </div>
+        
       </div>
+      {/* Underdevelopment Section */}
+    <div className="text-center mt-8 flex flex-col items-center justify-center max-w-[50%]">
+      <p className="text-lg md:text-xl lg:text-2xl font-medium mb-4">
+        This website is currently under development and testing. We appreciate your patience and feedback during this phase.
+      </p>
+      <button className="bg-black text-white rounded-[25px] p-3 flex items-center justify-center gap-2">
+        <MdEmail size={24} />
+        <a href="mailto:rashodkorala2002@gmail.com">Contact Development Team</a>
+      </button>
+    </div>
     </div>
   );
 };
