@@ -31,7 +31,7 @@ const About = (props: Props) => {
             <Image key={image.id} src={image.src} alt="image" className={image.span} width={image.width} height={image.height} />
           </div>
           <div>
-            <p className="py-4 text-[15px] sm:text-[18px] md:text-[21px]  lg:text-[24px] xl:text-[28px] ztext-left font-light ">
+            <p className="py-4 text-[15px] sm:text-[18px] md:text-[21px] 2xl:text-[28px] text-left font-light ">
               <strong className="font-bold">Bandu Manamperi</strong> is a renowned artist who holds a BFA in sculpture and is a part of
               Theertha International Artists&apos; Collective, Sri Lanka. He is a pioneer of performance art in Sri Lanka and continues to be an
               influential figure in the field. He creates deeply personal artworks that focus on the transformation of his own body, while

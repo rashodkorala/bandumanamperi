@@ -19,9 +19,9 @@ const Contact = () => {
           <div className="flex flex-col gap-2">
             <h1 className="font-bold text-[40px]  md:text-[47px] lg:text-[54px] xl:text-[63px]">Contact</h1>
             <div className="p-2">
-            <p className="px-0 pb-2 text-[25px] md:text-[30px] lg:text-[35px] xl:text-[40px] font-bold">Bandu Manamperi&apos;s Home & Studio</p>
+            {/* <p className="px-0 pb-2 text-[25px] md:text-[30px] lg:text-[35px] xl:text-[40px] font-bold">Bandu Manamperi&apos;s Home & Studio</p> */}
             {contacts.map((contact, index) => (
-                <Link href={contact.path} className={"px-0 pb-1 gap-1 flex items-center text-[18px] md:text-[21px] lg:text-[25px] xl:text-[30px] "} key={index}>
+                <Link href={contact.path} className={"px-0 pb-1 gap-1 flex items-center text-[18px] md:text-[21px] 2xl:text-[30px] "} key={index}>
                   <contact.icon size={contact.iconSize} className="mr-1" />
                   {contact.desc}
                 </Link>
@@ -51,7 +51,7 @@ const Contact = () => {
       </div>
       {/* Underdevelopment Section */}
     <div className="text-center mt-8 flex flex-col items-center justify-center w-full md:max-w-[60%]">
-      <p className="text-sm md:text-xl lg:text-2xl font-bold mb-4 w-full">
+      <p className="text-sm md:text-xl font-bold mb-4 w-full">
         This website is currently under development and testing. We appreciate your patience and feedback during this phase.
       </p>
       <button className="bg-black text-white rounded-[25px] p-3 flex items-center justify-center gap-2 text-[10px]">
