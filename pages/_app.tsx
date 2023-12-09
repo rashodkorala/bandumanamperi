@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
     {/* {sho wPopup && <Popup onClose={closePopup} />} */}
       <Navbar />
       <Component {...pageProps} />
-       <SpeedInsights />
+       {/* <SpeedInsights /> */}
       <Footer />
     </>
   );
