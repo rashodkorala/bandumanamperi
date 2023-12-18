@@ -23,7 +23,7 @@ const About = (props: Props) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
-    <div id="about" className="w-full h-full bg-white md:h-screen justify-center items-center flex flex-col">
+    <div id="about" className="w-full h-full bg-white md:h-[105vh] justify-center items-center flex flex-col">
       <div className="max-w-[1900px] mx-auto px-4 flex flex-col justify-center text-black xsm:px-5">
         <h1 className="font-bold text-[40px] md:text-[47px] lg:text-[54px] xl:text-[63px]">About</h1>
         <div className="flex flex-col py-4 gap-3">
