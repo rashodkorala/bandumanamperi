@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.2",
     "@react-spring/web": "^9.7.3",
     "@types/node": "20.10.4",
     "@types/react": "18.2.43",
