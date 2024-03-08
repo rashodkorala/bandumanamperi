@@ -1,18 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
-import { HiArrowCircleLeft, HiArrowCircleRight } from "react-icons/hi";
-
-//import x icon from react-icons
+import React, { useState, useEffect } from "react";
+import { HiArrowCircleRight } from "react-icons/hi";
 import { FaTimes } from "react-icons/fa";
 import ArtistCv from "../subComponents/ArtistCv.jsx";
-
 import Image from "next/image";
-import Link from "next/link";
 
-// import Data from "../data/data";
-
-type Props = {};
-
-const About = (props: Props) => {
+const About = () => {
   const image = {
     id: 1,
     src: "/Assets/profile.jpeg",
@@ -22,16 +14,34 @@ const About = (props: Props) => {
   };
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
+  useEffect(() => {
+    // Lock scrolling when the popup is open
+    if (isPopupOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Cleanup function to remove overflow-hidden class when unmounting
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [isPopupOpen]);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   return (
-    <div id="about" className="w-full h-full bg-white md:h-[105vh] justify-center items-center flex flex-col">
-      <div className="max-w-[1900px] mx-auto px-4 flex flex-col justify-center text-black xsm:px-5">
-        <h1 className="font-bold text-[40px] md:text-[47px] lg:text-[54px] xl:text-[63px]">About</h1>
+    <div id="about" className="w-full h-full bg-transparent md:h-[105vh] justify-center items-center flex flex-col">
+      <div className="max-w-[1900px] mx-auto px-4 flex flex-col justify-center  xsm:px-5">
+        <h1 className="text-[40px] md:text-[47px] lg:text-[54px] xl:text-[63px] ">About</h1>
         <div className="flex flex-col py-4 gap-3">
           <div className="">
             <Image key={image.id} src={image.src} alt="image" className={image.span} width={image.width} height={image.height} />
           </div>
           <div>
-            <p className="py-4 text-[15px] sm:text-[18px] md:text-[21px] 2xl:text-[28px] text-left font-light ">
+            <p className="py-4 text-[15px] sm:text-[18px] md:text-[21px] 2xl:text-[28px] text-left font-light">
               <strong className="font-bold">Bandu Manamperi</strong> is a renowned artist who holds a BFA in sculpture and is a part of
               Theertha International Artists&apos; Collective, Sri Lanka. He is a pioneer of performance art in Sri Lanka and continues to be an
               influential figure in the field. He creates deeply personal artworks that focus on the transformation of his own body, while
@@ -41,30 +51,24 @@ const About = (props: Props) => {
               our bodies.
             </p>
             <button
-              className="flex text-md hover:scale-110 transition-all duration-1000 ease-in-out bg-black w-[100px] md:w-[120px] text-white rounded-[45px] px-2 py-1 md:px-4 md:py-2 items-center justify-center"
-              onClick={() => {
-                setIsPopupOpen(true);
-              }}>
+              className="flex text-md hover:scale-110 transition-all duration-1000 ease-in-out w-[100px] md:w-[120px] rounded-[45px] px-2 py-1 md:px-4 md:py-2 items-center justify-center"
+              onClick={togglePopup}>
               View CV
               <HiArrowCircleRight />
             </button>
             {isPopupOpen && (
               <div className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-50 ">
-                <div className="absolute top-0 left-0 w-full h-full bg-white opacity-70" id="overlay"></div>
-                <div className="w-full max-w-[1500px] h-full max-h-[700px] justify-center items-center overflow-scroll mx-auto roundedtext-left px-6 z-10 bg-[#ffffff]">
-                  <div className="flex flex-row  bg-white justify-between items-center p-3 pt-6 opacity-100" id="header">
-                    <h1 className="text-2xxl font-bold text-black">Curriculum Vitae</h1>
+                <div className=" popup absolute top-0 left-0 w-full h-full bg-white dark:bg-black opacity-70" id="overlay"></div>
+                <div className="w-full max-w-[1500px] h-full max-h-[700px] justify-center items-center overflow-scroll overflow-x-hidden mx-auto text-left px-6 z-10 bg-white dark:bg-black">
+                  <div className="flex flex-row fixed w-full max-w-[1475px] justify-between items-center opacity-100 bg-white dark:bg-black h-[20px] p-4">
+                    <h1 className="text-2xxl font-bold">Curriculum Vitae</h1>
                     <div
-                      className="cursor-pointer z-50 "
-                      onClick={() => {
-                        {
-                          setIsPopupOpen(false);
-                        }
-                      }}>
-                      <FaTimes />
+                      className="cursor-pointer flex z-50"
+                      onClick={togglePopup}>
+                      <FaTimes className=""/>
                     </div>
                   </div>
-                  <div className="p-3">
+                  <div className="p-3 mt-10">
                     <ArtistCv />
                   </div>
                 </div>

@@ -14,18 +14,18 @@ const Navbar = (props: Props) => {
   const HandleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed bg-white w-full h-[50px] sm:h-[80px] flex justify-between items-center px-4 text-black z-50 top-0">
+    <div className="fixed bg-transparent w-full h-[50px] sm:h-[80px] flex justify-between items-center px-4 z-50 top-0 ">
       <div className="z-50">
-        <h1>Bandu Manamperi</h1>
+        <h1 className="text-xl">Bandu Manamperi</h1>
         {/* <img src={Logo} alt="logo" style={{ width: "50px" }} /> */}
       </div>
       {/* menu */}
       <div className="hidden md:flex">
         <ul className="flex">
           {navLinks.map((link, index) => (
-            <li className="py-4" key={index}>
+            <li className="py-4 text-xl" key={index}>
               <Link href={link.path} legacyBehavior scroll={link.scroll}>
-                <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500} offset={link.offset}>
+                <LinkS activeClass="active" to={link.scrollTo} smooth={true} duration={500} offset={link.offset} spy={true}>
                   {link.title}
                 </LinkS>
               </Link>

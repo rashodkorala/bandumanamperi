@@ -6,7 +6,7 @@ export const navLinks = [
   { title: "About", path: "/#about", scrollTo: "about", offset: -200, scroll: false },
   { title: "Work", path: "/#work", scrollTo: "work", offset: -70, scroll: false },
   { title: "Contact", path: "/#contact", scrollTo: "contact", offset: -100, scroll: false },
-  { title: "Gallery", path: "/gallery", scrollTo: "", offset: 0, scroll: true },
+  { title: "Gallery", path: "/gallery", scrollTo: "", offset: 0, scroll: false },
 ];
 
 export const socialLinks = [

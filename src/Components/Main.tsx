@@ -20,7 +20,7 @@ const Main = () => {
     <>
       {/* Loading Screen */}
       {isLoading && (
-        <div className="fixed inset-0 z-50 flex justify-center items-center bg-white">
+        <div className="fixed inset-0 z-50 flex justify-center items-center bg-white dark:bg-black text-black dark:text-white">
           <TailSpin color="#000" height={80} width={80} />
         </div>
       )}

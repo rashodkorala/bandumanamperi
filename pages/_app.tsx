@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Navbar from "../src/Components/Navbar";
 import Footer from "../src/Components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { ThemeProvider } from "../src/Components/subComponents/ThemeContext";
 // import { useState, useEffect } from "react";
 // import Popup from "./../src/Components/subComponents/Popups/devPopup";
 export default function App({ Component, pageProps }: AppProps) {
@@ -20,7 +21,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
     {/* {sho wPopup && <Popup onClose={closePopup} />} */}
       <Navbar />
+      <ThemeProvider>
       <Component {...pageProps} />
+    </ThemeProvider>
        {/* <SpeedInsights /> */}
       <Footer />
     </>

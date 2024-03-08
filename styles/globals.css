@@ -2,12 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
 @layer base {
   body {
-    @apply font-sans;
+    font-family:' Comfortaa', sans-serif;
+    /* @apply font-semibold; */
+    @apply text-[#000000];
+    @apply antialiased;
     @apply bg-transparent;
-    scroll-behavior: smooth;
+    @apply scrollbar-hide;
+  }
 
+  button{
+    @apply bg-black;
+    @apply text-white;
   }
   li {
     @apply px-4;
@@ -20,3 +30,38 @@
     clip-path: inset(0.5px);
   }
 }
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+    scrollbar-width: thin;
+    
+  }
+
+  button {
+    background-color: #fff; /* Dark mode background color */
+    color: #000; /* Dark mode text color */
+  }
+
+  p{
+    @apply text-systemGray;
+  }
+}
+
+
+  ::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    /* border-radius: 50px; Radius of the scrollbar */
+    /* background: transparent; Background of the scrollbar */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:transparent; /* Color of the tracking area */
+    scroll-behavior: smooth ;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(129, 129, 129, 0.741); /* Set scrollbar handle color with transparency */
+  }
