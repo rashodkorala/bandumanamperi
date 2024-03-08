@@ -32,7 +32,7 @@ const DashboardMain: React.FC = () => {
     };
 
     return (
-        <div className="h-screen">
+        <div className="min-h-screen">
             <div className="flex justify-between items-center py-4 px-6 border-b border-gray-200 dark:border-gray-900">
                 <h1 className="text-2xl font-semibold">Dashboard</h1>
                 <button
@@ -43,7 +43,7 @@ const DashboardMain: React.FC = () => {
                 </button>
             </div>
             <div className="container mx-auto py-8 px-4">
-                <h2 className="text-xl font-semibold mb-4">Welcome to the CMS Dashboard!</h2>
+                <h2 className="text-xl font-semibold mb-4">Hello Bandu, Welcome to Your Personal Dashboard</h2>
                 {/* Your dashboard content goes here */}
             </div>
         </div>
