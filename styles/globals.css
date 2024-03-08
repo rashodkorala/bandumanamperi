@@ -9,9 +9,9 @@
   body {
     font-family:' Comfortaa', sans-serif;
     /* @apply font-semibold; */
-    @apply text-[#000000];
+    @apply text-black;
     @apply antialiased;
-    @apply bg-transparent;
+    @apply bg-white;
     @apply scrollbar-hide;
   }
 
@@ -32,10 +32,10 @@
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #000; /* Dark mode background color */
-    color: #fff; /* Dark mode text color */
-    scrollbar-width: thin;
-    
+    @apply bg-black;
+    @apply text-white;
+
+
   }
 
   button {
@@ -45,6 +45,9 @@
 
   p{
     @apply text-systemGray;
+  }
+  h1{
+    @apply text-white;
   }
 }
 

@@ -22,10 +22,10 @@ const SculpturesMain = (props: Props) => {
     },
   ];
   return (
-    <div className="w-full text-black flex flex-col md:pt-16 max-w-[2000px] mx-auto justify-center items-center">
+    <div className="w-full flex flex-col md:pt-16 max-w-[2000px] mx-auto justify-center items-center">
       <div className="p-4 flex flex-col md:flex-row justify-center items-center">
         <div className="p-4 flex flex-col">
-          <h1 className="text-3xl xl:text-[50px] text-black text-left font-bold leading-10">Sculptures and Installations</h1>
+          <h1 className="text-3xl xl:text-[50px] text-left font-bold leading-10">Sculptures and Installations</h1>
           <p className="py-6 text-[14px] xsm:text-md xl:text-xl text-left font-light max-w-[1200px]">
             Bandu Manamperi&apos;s artistic work delves deeply into the complex and multifaceted issues surrounding the commercialization
             and commodification of cultural symbols in Sri Lankan society. Through his sculptures and installations, he confronts and

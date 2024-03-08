@@ -20,12 +20,14 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
     {/* {sho wPopup && <Popup onClose={closePopup} />} */}
-      <Navbar />
+     
       <ThemeProvider>
+      <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </ThemeProvider>
        {/* <SpeedInsights /> */}
-      <Footer />
+     
     </>
   );
 }

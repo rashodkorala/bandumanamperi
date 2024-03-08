@@ -46,9 +46,9 @@ const PaintingMain = (props: Props) => {
     },
   ];
   return (
-    <div className="w-full text-black flex flex-col md:pt-16 max-w-[1000px] mx-auto justify-center items-center">
+    <div className="w-full flex flex-col md:pt-16 max-w-[1000px] mx-auto justify-center items-center">
       <div className="p-4 flex flex-col items-center justify-center">
-        <h1 className="text-3xl xl:text-[50px] text-black text-center font-bold">Paintings</h1>
+        <h1 className="text-3xl xl:text-[50px] text-center font-bold">Paintings</h1>
         <p className="py-3 text-[14px] xsm:text-md xl:text-xl text-center font-light max-w-[700px]">
           Explore the rich and deeply personal artworks of Bandu Manamperi on this page. Through his use of shapes and patterns, he explores
           the themes of memory and transformation in a deeply personal way. Each painting is a study in balance, harmony, and the ways in

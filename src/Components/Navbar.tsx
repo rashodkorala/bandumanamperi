@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Link as LinkS } from "react-scroll";
-
+import { useRouter } from 'next/router';
 import { navLinks, socialLinks } from "../data/linksData";
 
 import React, { useState } from "react";
@@ -10,11 +10,17 @@ import { HiOutlineMail } from "react-icons/hi";
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const router = useRouter();
   const [nav, setNav] = useState(false);
   const HandleClick = () => setNav(!nav);
 
+  const isTransparentNavbarPage = router.pathname === '/preformances';
+  console.log('isTransparentNavbarPage', isTransparentNavbarPage);
+
+  const navbarClassName = isTransparentNavbarPage ? 'bg-transparent' : 'bg-white dark:bg-black';
+
   return (
-    <div className="fixed bg-transparent w-full h-[50px] sm:h-[80px] flex justify-between items-center px-4 z-50 top-0 ">
+    <div className={`fixed w-full flex justify-between items-center p-4 z-50 top-0 ${navbarClassName}`}>
       <div className="z-50">
         <h1 className="text-xl">Bandu Manamperi</h1>
         {/* <img src={Logo} alt="logo" style={{ width: "50px" }} /> */}
@@ -38,7 +44,7 @@ const Navbar = (props: Props) => {
         {nav ? <FaTimes /> : <FaBars />}
       </div>
       {/* mobile meunu */}
-      <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center z-10"}>
+      <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen bg-white dark:bg-black flex flex-col justify-center items-center z-10"}>
         {navLinks.map((link, index) => (
           <li className="py-4" key={index}>
             <Link href={link.path} legacyBehavior scroll={link.scroll}>
