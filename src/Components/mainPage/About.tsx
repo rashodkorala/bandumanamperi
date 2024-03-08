@@ -58,17 +58,19 @@ const About = () => {
             </button>
             {isPopupOpen && (
               <div className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-50 ">
-                <div className=" popup absolute top-0 left-0 w-full h-full bg-white dark:bg-black opacity-70" id="overlay"></div>
-                <div className="w-full max-w-[1500px] h-full max-h-[700px] justify-center items-center overflow-scroll overflow-x-hidden mx-auto text-left px-6 z-10 bg-white dark:bg-black">
-                  <div className="flex flex-row fixed w-full max-w-[1475px] justify-between items-center opacity-100 bg-white dark:bg-black h-[20px] p-4">
-                    <h1 className="text-2xxl font-bold">Curriculum Vitae</h1>
-                    <div
-                      className="cursor-pointer flex z-50"
-                      onClick={togglePopup}>
-                      <FaTimes className=""/>
+                <div className=" popup absolute top-0 left-0 w-full h-full bg-white dark:bg-black opacity-70"></div>
+                <div className="flex flex-col w-full max-w-[1500px] h-full max-h-[700px] overflow-scroll overflow-x-hidden z-10 bg-white dark:bg-black">
+                  <div className="fixed flex justify-center items-center w-full max-w-[1500px] bg-white dark:bg-black">
+                    <div className="flex items-center justify-between w-full m-4">
+                      <h1 className="text-2xl font-bold">Curriculum Vitae</h1>
+                      <div
+                        className="cursor-pointer z-50"
+                        onClick={togglePopup}>
+                        <FaTimes className="" />
+                      </div>
                     </div>
                   </div>
-                  <div className="p-3 mt-10">
+                  <div className="p-9">
                     <ArtistCv />
                   </div>
                 </div>

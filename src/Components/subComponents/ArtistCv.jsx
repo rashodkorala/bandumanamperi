@@ -3,7 +3,7 @@ import Artist from "../../data/data";
 
 const ArtistCv = () => {
   return (
-    <div className="">
+    <div className="w-full h-full flex flex-col p-5">
       {Artist.map((cv, index) => {
         return (
           <div key={index}>
