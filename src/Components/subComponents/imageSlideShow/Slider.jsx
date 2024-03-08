@@ -1,107 +1,58 @@
-import React, { useState } from "react";
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import React, { useState, useEffect } from "react";
+import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { BsDot } from "react-icons/bs";
 
-function createImage(width, height) {
-  const images = [];
+const Slider = ({ hoveredSlideIndex, setHoveredSlideIndex, slides }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  for (let index = 0; index < 5; index++) {
-    //different sizes of images
-
-    images.push({
-      id: index + "",
-      img:
-        "https://picsum.photos/" +
-        width +
-        "/" +
-        height +
-        "/" +
-        "?random=" +
-        index,
-      width: width,
-      height: height,
-      view: "desktop",
-    });
-  }
-  return images;
-}
-
-const Slider = () => {
-  const imageData = createImage(1800, 600);
-  const imageDataMobile = createImage(400, 200);
-
-  const slideLeft = () => {
-    // setCurrent(current === 0 ? length - 1 : current - 1);
-    let slide = document.getElementById("sliderdesktop");
-    slide.scrollLeft -= slide.offsetWidth;
-
-    let slideMobile = document.getElementById("slidermobile");
-    slideMobile.scrollLeft -= slideMobile.offsetWidth;
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
   };
 
-  const slideRight = () => {
-    // setCurrent(current === length - 1 ? 0 : current + 1);
-    let slide = document.getElementById("sliderdesktop");
-    slide.scrollLeft += slide.offsetWidth;
-
-    let slideMobile = document.getElementById("slidermobile");
-    slideMobile.scrollLeft += slideMobile.offsetWidth;
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
   };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex]);
+
+  useEffect(() => {
+    if (hoveredSlideIndex) setCurrentIndex(hoveredSlideIndex);
+  }, [hoveredSlideIndex]);
 
   return (
-    <div className="bg-blue-300 flex justify-center items-center w-full mx-auto">
-      <div className="relative">
-        <MdChevronLeft
-          onClick={slideLeft}
-          className="absolute z-10 left-0 text-5xl text-white cursor-pointer opacity-50 hover:opacity-100"
-        />
-      </div>
+    <div className="max-w-[1500px] mx-auto h-[450px] md:h-[526px] lg:h-[615px] xl:h-[720px] 2xl:h-[840px] w-full py-5 relative group">
       <div
-        id="sliderdesktop"
-        className=" hidden md:flex md:flex-row overflow-x-scroll scroll whitespace-nowrap scroll-smooth snap-mandatory snap-x scrollbar-hide "
-      >
-        {/* <img
-          id="slideImg"
-          src={imageData[current].img}
-          alt=""
-          className="transition duration-500 ease-in-out transform"
-        /> */}
-        {/* in mobile view load mobile images
-      and in desktop view load desktop images */}
-        {imageData.map((image) => (
-          <Image
-            key={image.id}
-            src={image.img}
-            alt=""
-            className="transition duration-500 ease-in-out transform snap-center"
-          />
-        ))}
+        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+        className="w-full h-full rounded-2xl bg-center bg-cover md:bg-blend-normal duration-500"></div>
+      {/* Left Arrow */}
+      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+        <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
-      <div
-        id="slidermobile"
-        className="flex flex-row overflow-x-scroll scroll whitespace-nowrap scroll-smooth snap-mandatory snap-x scrollbar-hide md:hidden"
-      >
-        {/* <img
-          id="slideImg"
-          src={imageData[current].img}
-          alt=""
-          className="transition duration-500 ease-in-out transform"
-        /> */}
-        {/* in mobile view load mobile images
-      and in desktop view load desktop images */}
-        {imageDataMobile.map((image) => (
-          <Image
-            key={image.id}
-            src={image.img}
-            alt=""
-            className="transition duration-500 ease-in-out transform snap-center"
-          />
-        ))}
+      {/* Right Arrow */}
+      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+        <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
-      <div className="relative bg-black" onClick={slideRight}>
-        <MdChevronRight
-          onClick={slideRight}
-          className="absolute z-10 right-0 text-5xl text-white cursor-pointer opacity-50 hover:opacity-100"
-        />
+      <div className="flex top-4 justify-center py-2">
+        {slides.map((slide, slideIndex) => (
+          <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className="text-2xl cursor-pointer">
+            <BsDot />
+          </div>
+        ))}
       </div>
     </div>
   );

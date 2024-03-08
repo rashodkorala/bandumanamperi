@@ -1,13 +1,10 @@
-import Footer from "../src/Components/Footer";
-import Navbar from "../src/Components/navbar";
-import Gallery from "../src/Components/Gallery";
+import React from "react";
+import PaintingsMain from "../src/Components/paintingsPage/PaintingMain";
 
 export default function Paintings() {
   return (
-    <div>
-      <Navbar />
-      <Gallery />
-      <Footer />
+    <div className="flex flex-col mt-[50px] md:mt-[0px] py-3">
+      <PaintingsMain />
     </div>
   );
 }
