@@ -1,9 +1,11 @@
 // firebase-config.ts
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
+const apikey=process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey:apikey,
   authDomain: "bandu-manamperi.firebaseapp.com",
   projectId: "bandu-manamperi",
   storageBucket: "bandu-manamperi.appspot.com",
@@ -13,5 +15,6 @@ const firebaseConfig = {
 
 // Initialize Firebase and export the app
 const app = initializeApp(firebaseConfig);
+const auth=getAuth(app);
 
 export default app;
