@@ -1,10 +1,11 @@
-import Main from "../src/Components/Main";
+
+import LoginPage from "../src/Components/LoginPage";
 
 
 export default function Home() {
   return (
-    <div>
-      <Main />
+    <div className="h-screen">
+      <LoginPage />
     </div>
   );
 }

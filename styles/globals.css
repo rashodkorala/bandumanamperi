@@ -5,7 +5,8 @@
 @layer base {
   body {
     @apply font-sans;
-    /* @apply bg-black; */
+    @apply bg-white;
+    @apply text-gray-800;
   }
   li {
     @apply px-4;
@@ -16,5 +17,23 @@
 @media not all and (min-resolution: 0.001dpcm) {
   img[loading="lazy"] {
     clip-path: inset(0.5px);
+  }
+}
+
+/*add dark mode*/
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-black;
+    @apply text-white;
+  }
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(100%);
   }
 }
