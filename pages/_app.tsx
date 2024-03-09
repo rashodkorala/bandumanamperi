@@ -1,7 +1,7 @@
 // _app.tsx
-import Footer from '../src/components/Footer';
-import NavBar from '../src/components/NavBar';
-import { ThemeProvider } from '../src/components/ThemeContext';
+import Footer from '@/src/components/Footer';
+import NavBar from '@/src/components/NavBar';
+import { ThemeProvider } from '@/src/components/ThemeContext';
 import '../styles/globals.css';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
