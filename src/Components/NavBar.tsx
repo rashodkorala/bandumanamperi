@@ -1,4 +1,3 @@
-import { signOut } from 'firebase/auth';
 import router from 'next/router';
 import React from 'react'
 import { logout } from '../controller/authController';

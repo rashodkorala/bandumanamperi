@@ -1,11 +1,11 @@
 // _app.tsx
 
-import '../styles/globals.css';
+import '@/styles/globals.css';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import NavBar from '@/src/components/NavBar';
 import Footer from '@/src/components/Footer';
-import { ThemeProvider } from '@/src/components/ThemeContext';
+import { ThemeProvider } from '@/src/components/ThemeContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

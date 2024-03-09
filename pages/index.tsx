@@ -1,12 +1,11 @@
 
-import DashBoardMain from "../src/components/DashBoardMain";
-import LoginPage from "../src/view/LoginView";
+import DashboardMain from "@/src/components/DashBoardMain";
 
 
 export default function Home() {
   return (
     <div className="">
-     <DashBoardMain />
+      <DashboardMain />
     </div>
   );
 }
