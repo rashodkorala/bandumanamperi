@@ -21,12 +21,10 @@ const DashboardMain: React.FC = () => {
     }, [router]);
 
     const handleCategoryClick = () => {
-        setShowPopup(true); // Show the popup when a category button is clicked
+       router.push('/uploadMedia');
     };
 
-    const handleClosePopup = () => {
-        setShowPopup(false); // Hide the popup when the close button is clicked
-    };
+   
 
     return (
         <div className="min-h-screen">
@@ -35,7 +33,7 @@ const DashboardMain: React.FC = () => {
                 <h2 className="text-xl font-semibold mb-4 text-center">Hello Bandu, Welcome to Your Personal Dashboard</h2>
                 <div className='flex items-center justify-evenly'>
                     <button className="bg-blue-500 py-2 px-4 rounded hover:bg-blue-600 focus:outline-none" onClick={handleCategoryClick}>
-                        upload a creation
+                        upload a Media
                     </button>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 
-import DashBoardMain from "../src/Components/DashBoardMain";
-import LoginPage from "../src/Components/LoginPage";
+import DashBoardMain from "../src/components/DashBoardMain";
+import LoginPage from "../src/view/LoginView";
 
 
 export default function Home() {

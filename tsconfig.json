@@ -13,8 +13,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "typeRoots": ["./types", "./node_modules/@types"],
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/Components/subComponents/imageSlideShow/Slider.jsx", "src/Components/CarouselFadeExample.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/subComponents/imageSlideShow/Slider.jsx", "src/components/CarouselFadeExample.jsx"],
   "exclude": ["node_modules"]
 }
