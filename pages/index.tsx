@@ -1,4 +1,5 @@
-import DashboardMain from "../src/Components/DashBoardMain";
+import DashboardMain from "@/src/Components/DashBoardMain";
+
 
 export default function Home() {
   return (
