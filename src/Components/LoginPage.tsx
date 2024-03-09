@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import app from './../../utils/firebase-config';
+import {auth} from './../../utils/firebase-config';
 import { useRouter } from 'next/router';
 
 const LoginPage: React.FC = () => {
@@ -19,7 +19,6 @@ const LoginPage: React.FC = () => {
 
   const handleLogin = async () => {
     try {
-      const auth = getAuth(app);
       await signInWithEmailAndPassword(auth, email, password);
       // go to dashboard
       
