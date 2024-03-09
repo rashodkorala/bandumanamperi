@@ -37,9 +37,9 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-200">
+    <div className="flex flex-col items-center justify-center h-screen ">
       <div className="text-3xl animate-slide-in mb-8">Welcome Bandu</div>
-      <div className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg">
+      <div className="flex flex-col items-center p-8 rounded-lg shadow-lg">
         <input 
           type="email" 
           placeholder="Email" 
