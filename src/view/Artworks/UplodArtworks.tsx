@@ -1,4 +1,4 @@
-import { uploadArtwork } from 'src/controller/ArtworkController';
+import { uploadArtwork } from '../../controller/ArtworkController';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
