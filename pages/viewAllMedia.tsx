@@ -1,4 +1,4 @@
-import ViewAllArtworks from "src/view/Artworks/ViewAllArtworks";
+import ViewAllArtworks from "./../src/view/Artworks/ViewAllArtworks";
 
 export default function ViewAllMedia() {
     return (
