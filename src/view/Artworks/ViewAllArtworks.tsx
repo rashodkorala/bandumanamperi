@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { viewAllArtworks } from './../../controller/ArtworkController';
+import { viewAllArtworks } from '../../Controller/ArtworkController';
 import Image from 'next/image';
 
 const ViewAllMedia: React.FC = () => {

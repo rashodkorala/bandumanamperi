@@ -7,7 +7,7 @@ import {
   signOut,
 } from 'firebase/auth';
 
-import { auth } from './../../utils/firebase-config';
+import { auth } from '../../utils/firebase-config';
 
 
 export const signUp = async (email: string, password: string) => {
