@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { viewAllArtworks } from '../../Controller/ArtworkController';
+
 import Image from 'next/image';
+import { viewAllArtworks } from '@/src/Controller/ArtworkController';
 
 const ViewAllMedia: React.FC = () => {
   const [artworks, setArtworks] = useState<any[]>([]);

@@ -1,6 +1,7 @@
 import { ref as storageRef, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc, DocumentReference,getDocs, deleteDoc, QuerySnapshot, DocumentData } from 'firebase/firestore';
-import { storage, firestore } from '../../utils/firebase-config'
+import { firestore, storage } from '@/utils/firebase-config';
+
 
 interface Artwork {
   id?: string;

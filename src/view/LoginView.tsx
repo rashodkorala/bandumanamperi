@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
-import { login } from '../Controller/authController';
+import { login } from '@/src/Controller/authController';
+
 
 const LoginPage: React.FC = () => {
   const router = useRouter();

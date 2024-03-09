@@ -1,5 +1,6 @@
 // authController.ts
 
+import { auth } from '@/utils/firebase-config';
 import {
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
@@ -7,7 +8,7 @@ import {
   signOut,
 } from 'firebase/auth';
 
-import { auth } from '../../utils/firebase-config';
+
 
 
 export const signUp = async (email: string, password: string) => {
