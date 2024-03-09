@@ -1,50 +1,45 @@
+import React, { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
-import {auth} from '../../utils/firebase-config';
+import { auth } from '../../utils/firebase-config';
 import Image from 'next/image';
-
 
 const DashboardMain: React.FC = () => {
     const router = useRouter();
+    
+
+    const [showPopup, setShowPopup] = useState(false); // State to manage popup visibility
 
     useEffect(() => {
-        // Check the user's authentication status
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (!user) {
-                // If the user is not logged in, redirect to the login page
                 router.push('/login');
             }
         });
 
-        // Clean up the subscription
         return () => unsubscribe();
     }, [router]);
 
-    const handleLogout = async () => {
-        try {
-            await signOut(auth);
-            // Redirect the user to the login page
-            router.push('/');
-        } catch (error) {
-            console.error('Error signing out:', error);
-        }
+    const handleCategoryClick = () => {
+        setShowPopup(true); // Show the popup when a category button is clicked
+    };
+
+    const handleClosePopup = () => {
+        setShowPopup(false); // Hide the popup when the close button is clicked
     };
 
     return (
         <div className="min-h-screen">
-            <div className="flex justify-between items-center py-4 px-6 border-b border-gray-200 dark:border-gray-900">
-                <h1 className="text-2xl font-semibold">Dashboard</h1>
-                <button
-                    className="bg-blue-500 py-2 px-4 rounded hover:bg-blue-600 focus:outline-none"
-                    onClick={handleLogout}
-                >
-                    Logout
-                </button>
-            </div>
-            <div className="container mx-auto py-8 px-4">
+            
+            <div className="container mx-auto py-8 px-4 gap-4">
                 <h2 className="text-xl font-semibold mb-4 text-center">Hello Bandu, Welcome to Your Personal Dashboard</h2>
+                <div className='flex items-center justify-evenly'>
+                    <button className="bg-blue-500 py-2 px-4 rounded hover:bg-blue-600 focus:outline-none" onClick={handleCategoryClick}>
+                        upload a creation
+                    </button>
+                </div>
             </div>
+            
         </div>
     );
 };
