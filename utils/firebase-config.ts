@@ -1,6 +1,7 @@
 // firebase-config.ts
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage"
 
 const apikey=process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
 // Your web app's Firebase configuration
@@ -15,5 +16,7 @@ const firebaseConfig = {
 
 // Initialize Firebase and export the app
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const storage = getStorage();
 
-export default app;
+export { app, auth, storage };

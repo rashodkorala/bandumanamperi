@@ -1,14 +1,15 @@
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
-import app from '../../utils/firebase-config';
+import {auth} from '../../utils/firebase-config';
+import Image from 'next/image';
+
 
 const DashboardMain: React.FC = () => {
     const router = useRouter();
 
     useEffect(() => {
         // Check the user's authentication status
-        const auth = getAuth(app);
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (!user) {
                 // If the user is not logged in, redirect to the login page
@@ -22,7 +23,6 @@ const DashboardMain: React.FC = () => {
 
     const handleLogout = async () => {
         try {
-            const auth = getAuth(app);
             await signOut(auth);
             // Redirect the user to the login page
             router.push('/');
@@ -43,8 +43,7 @@ const DashboardMain: React.FC = () => {
                 </button>
             </div>
             <div className="container mx-auto py-8 px-4">
-                <h2 className="text-xl font-semibold mb-4">Hello Bandu, Welcome to Your Personal Dashboard</h2>
-                {/* Your dashboard content goes here */}
+                <h2 className="text-xl font-semibold mb-4 text-center">Hello Bandu, Welcome to Your Personal Dashboard</h2>
             </div>
         </div>
     );
