@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import { getAuth, onAuthStateChanged} from 'firebase/auth';
 import { useRouter } from 'next/router';
-import { auth } from '../../utils/firebase-config';
-import Image from 'next/image';
+import { auth } from '@/utils/firebase-config';
 
 const DashboardMain: React.FC = () => {
     const router = useRouter();
