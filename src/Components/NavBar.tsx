@@ -1,6 +1,6 @@
 import router from 'next/router';
 import React from 'react'
-import { logout } from '../Controller/authController';
+import { logout } from './../Controller/authController';
 
 type Props = {}
 

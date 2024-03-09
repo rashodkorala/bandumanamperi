@@ -1,4 +1,4 @@
-import UplodMediaMain from "../src/view/Artworks/UplodArtworks";
+import UplodMediaMain from "../src/View/Artworks/UplodArtworks";
 
 export default function Uploadmedia() {
     return (
