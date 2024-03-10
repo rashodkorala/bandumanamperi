@@ -283,10 +283,3 @@ const artistCv = [
 
 export default artistCv;
 
-// import React from "react";
-
-// const data = () => {
-//   return <div>data</div>;
-// };
-
-// export default data;
