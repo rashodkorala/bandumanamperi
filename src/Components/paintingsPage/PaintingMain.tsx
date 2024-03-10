@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Gallery from "../Gallery";
 import Slider from "../subComponents/imageSlideShow/Slider";
-import { viewArtworksByType } from "../../Controller/artworkController";
+import { viewAllArtworks, viewArtworksByType } from "../../Controller/artworkController";
 import Image from 'next/image';
 
 
@@ -17,7 +17,7 @@ const PaintingMain = (props: Props) => {
 
   const fetchArtworks = async () => {
     try {
-      const fetchedArtworks = await viewArtworksByType('painting');
+      const fetchedArtworks = await viewArtworksByType('Painting');
       setArtworks(fetchedArtworks);
     } catch (error) {
       console.error('Error fetching artworks:', error);
@@ -56,12 +56,10 @@ const PaintingMain = (props: Props) => {
       <div className="flex flex-col w-full justify-center items-center">
         <Slider setHoveredSlideIndex={0} hoveredSlideIndex={0} slides={slides} />
       </div>
-      <div className="flex flex-wrap justify-center">
-      {artworks.map((artwork) => (
-          <div key={artwork.id} className="border rounded-lg p-4">
-            {/* <h2 className="text-xl font-semibold">{artwork.name}</h2>
-            <p className="text-gray-600">{artwork.date}</p>
-            <p className="text-gray-700">{artwork.description}</p> */}
+      <div className="max-w-[1300px] mx-auto px-4 flex justify-center h-full text-black xsm:px-5 p-10">
+          <div className="columns-3 gap-3 mx-auto space-y-3">
+          {artworks.map((artwork) => (
+          <div key={artwork.id}>
             <div className="mt-4">
               {artwork.photos.map((photo: string, index: number) => (
                 <Image key={index} src={photo} alt={`Artwork ${index + 1}`} className="w-full mb-2 rounded-lg" width={300} height={300} />
@@ -69,7 +67,8 @@ const PaintingMain = (props: Props) => {
             </div>
           </div>
         ))}
-    </div>
+          </div>
+        </div>
     </div>
   );
 };
