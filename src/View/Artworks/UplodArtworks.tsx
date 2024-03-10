@@ -53,6 +53,9 @@ const UplodMediaMain = (props: Props) => {
       type: mediaType
     }).then((res) => {
       console.log('Upload complete:', res);
+      // Clear the form
+      setMediaItem({ name: '', date: '', description: '', files: []});
+
     });
   };
 
