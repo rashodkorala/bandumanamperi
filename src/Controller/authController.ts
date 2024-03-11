@@ -2,7 +2,6 @@
 
 import { auth } from '@/utils/firebase-config';
 import {
-  createUserWithEmailAndPassword,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signOut,
@@ -10,22 +9,17 @@ import {
 
 
 
-
-export const signUp = async (email: string, password: string) => {
-  try {
-    await createUserWithEmailAndPassword(auth, email, password);
-    return true;
-  } catch (error: any) {
-    return error.message;
-  }
-};
-
 export const login = async (email: string, password: string) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
     return true;
   } catch (error: any) {
-    return error.message;
+    if (error.code === 'auth/user-not-found') {
+      return 'User not found';
+    }
+    if (error.code === 'auth/invalid-credential') {
+      return 'Invalid credentials';
+    }
   }
 };
 

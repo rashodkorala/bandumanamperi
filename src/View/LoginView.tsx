@@ -1,3 +1,5 @@
+// pages/login.tsx
+
 import React, { useState, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
 import { login } from '@/src/Controller/authController';
@@ -23,22 +25,17 @@ const LoginPage: React.FC = () => {
       return;
     }
     try {
-      login(email, password).then((res) => {
-        if (res) {
-          router.push('/');
-        } else {
-          // Handle error messages to the user
-          setError(res.message);
-        }
-      });
-    } catch (error:any) {
+      await login(email, password);
+      router.push('/');
+    }
+    catch (error: any) {
       setError(error.message);
     }
   };
 
   return (
     <div className="flex flex-col items-center justify-center h-screen ">
-      <div className="text-3xl animate-slide-in mb-8">Welcome Bandu</div>
+      <div className="text-3xl animate-slide-in mb-8">Hello Bandu</div>
       <div className="flex flex-col items-center p-8 rounded-lg shadow-lg">
         <input 
           type="email" 
