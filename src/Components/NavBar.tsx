@@ -42,7 +42,7 @@ const NavBar = (props: Props) => {
                 <div className='flex flex-row gap-4'>
                     <button className="focus:outline-none">Settings</button>
                     <button
-                    className="bg-blue-500 py-2 px-4 rounded hover:bg-blue-600 focus:outline-none"
+                    className="bg-blue-500 py-2 px-4 rounded hover:bg-blue-600 focus:outline-none text-white"
                     onClick={handleLogout}
                 >
                     Logout
