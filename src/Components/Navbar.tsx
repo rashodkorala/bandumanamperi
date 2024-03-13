@@ -17,10 +17,10 @@ const Navbar = (props: Props) => {
   const isTransparentNavbarPage = router.pathname === '/performances';
   console.log('isTransparentNavbarPage', isTransparentNavbarPage);
 
-  const navbarClassName = isTransparentNavbarPage ? 'bg-transparent' : 'bg-white dark:bg-black';
+  // const navbarClassName = isTransparentNavbarPage ? 'bg-transparent' : 'bg-white dark:bg-black';
 
   return (
-    <div className={`fixed w-full flex justify-between items-center p-4 z-50 top-0 ${navbarClassName}`}>
+    <div className={`fixed w-full flex justify-between items-center p-4 z-50 top-0 bg-white dark:bg-black`}>
       <div className="z-50">
         <h1 className="text-xl">Bandu Manamperi</h1>
         {/* <img src={Logo} alt="logo" style={{ width: "50px" }} /> */}

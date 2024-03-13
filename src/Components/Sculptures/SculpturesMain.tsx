@@ -63,7 +63,7 @@ const SculpturesMain = (props: Props) => {
             deeper understanding of the complexities and challenges facing contemporary Sri Lankan society.
         </p>
       </div>
-      <div className="embla w-full max-w-[1000px]">
+      <div className="embla w-full md:w-[700px] max-w-[1000px]">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             {slides.map((slide, index) => (
