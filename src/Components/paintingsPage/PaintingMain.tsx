@@ -1,15 +1,43 @@
-import React, { useEffect, useState } from "react";
-import Gallery from "../Gallery";
+import React, { useCallback, useEffect, useState } from "react";
+
 import Slider from "../subComponents/imageSlideShow/Slider";
 import { viewAllArtworks, viewArtworksByType } from "../../Controller/artworkController";
-import Image from 'next/image';
+
+import useEmblaCarousel from 'embla-carousel-react'
+import Image from "next/image";
+
+import Autoplay from 'embla-carousel-autoplay'
+
+import img1 from '@/public/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg'
+import img2 from '@/public/Assets/paintings/thousondEggs.jpg'
+import img3 from '@/public/Assets/Preformances/IronMan.jpg'
+import img4 from '@/public/Assets/Preformances/Bandaged_Body_1.jpg'
+import img5 from '@/public/Assets/installations_and_Sculptures/Numbed.jpg'
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 
 type Props = {};
 
 const PaintingMain = (props: Props) => {
   const [artworks, setArtworks] = useState<any[]>([]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true,}, [Autoplay()])
 
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
+  const slides = [
+    { url: img1 },
+    { url: img2 },
+    { url: img3 },
+    { url: img4 },
+    { url: img5 },
+  ]
   useEffect(() => {
     // Fetch artworks when the component mounts
     fetchArtworks();
@@ -24,24 +52,6 @@ const PaintingMain = (props: Props) => {
     }
   };
 
-  const slides = [
-    {
-      url: "/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg",
-    },
-    {
-      url: "/Assets/paintings/thousondEggs.jpg",
-    },
-    {
-      url: "/Assets/Preformances/IronMan.jpg",
-    },
-
-    {
-      url: "/Assets/Preformances/Bandaged_Body_1.jpg",
-    },
-    {
-      url: "/Assets/installations_and_Sculptures/Numbed.jpg",
-    },
-  ];
   return (
     <div className="w-full flex flex-col md:pt-16 max-w-[1000px] mx-auto justify-center items-center">
       <div className="p-4 flex flex-col items-center justify-center">
@@ -53,9 +63,25 @@ const PaintingMain = (props: Props) => {
           and depth of Bandu&apos;s art.
         </p>
       </div>
-      <div className="flex flex-col w-full justify-center items-center">
-        <Slider setHoveredSlideIndex={0} hoveredSlideIndex={0} slides={slides} />
-      </div>
+      <div className="embla">
+          <div className="embla__viewport" ref={emblaRef}>
+            <div className="embla__container">
+              {slides.map((slide, index) => (
+                <div className="embla__slide flex justify-center items-center" key={index}>
+                  <Image
+                    src={slide.url}
+                    alt="image"
+                    className="w-full max-w-[1000px] rounded-[25px] object-fill"
+                  />
+                </div>
+              ))}
+            </div>
+          
+          </div>
+          <button className="bg-transparent text-black dark:text-white p-3" onClick={scrollPrev}><IoIosArrowDropleft size={30}/></button>
+          <button className="bg-transparent text-black dark:text-white" onClick={scrollNext}><IoIosArrowDropright size={30}/></button>
+
+        </div>
       <div className="max-w-[1300px] mx-auto px-4 flex justify-center h-full text-black xsm:px-5 p-10">
           <div className="columns-3 gap-3 mx-auto space-y-3">
           {artworks.map((artwork) => (
