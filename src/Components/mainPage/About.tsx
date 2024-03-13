@@ -61,7 +61,7 @@ const About = () => {
                 <div className=" popup absolute top-0 left-0 w-full h-full bg-white dark:bg-black opacity-70"></div>
                 <div className="flex flex-col w-full max-w-[1500px] h-full max-h-[700px] overflow-scroll overflow-x-hidden z-10 bg-white dark:bg-black">
                   <div className="fixed flex justify-center items-center w-full max-w-[1500px] bg-white dark:bg-black">
-                    <div className="flex items-center justify-between w-full m-4">
+                    <div className="flex items-center justify-between w-full px-4">
                       <h1 className="text-2xl font-bold">Curriculum Vitae</h1>
                       <div
                         className="cursor-pointer z-50"
@@ -70,7 +70,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="p-9">
+                  <div className="py-3">
                     <ArtistCv />
                   </div>
                 </div>

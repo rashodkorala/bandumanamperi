@@ -6,7 +6,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 
-import { navLinks, socialLinks, contacts } from "../data/linksData";
+import { navLinks, socialLinks, contacts } from "../../public/data/linksData";
 
 type Props = {};
 

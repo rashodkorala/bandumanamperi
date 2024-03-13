@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { navLinks, socialLinks, contacts } from "../../data/linksData";
+import { navLinks, socialLinks, contacts } from "../../../public/data/linksData";
 import Link from "next/link";
 import { MdEmail } from 'react-icons/md';
 

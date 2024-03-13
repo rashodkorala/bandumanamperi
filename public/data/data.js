@@ -39,23 +39,23 @@ const artistCv = [
       },
       {
         year: "2020",
-        discription: "‘A Theertha interim show.’ Theertha Red Dot Gallery, Borella, Colombo, Sri Lanka.",
+        discription: "'A Theertha interim show.' Theertha Red Dot Gallery, Borella, Colombo, Sri Lanka.",
       },
       {
         year: "2020",
-        discription: "‘A Theertha interim show.’ Theertha Red Dot Gallery, Borella, Colombo, Sri Lanka.",
+        discription: "'A Theertha interim show.' Theertha Red Dot Gallery, Borella, Colombo, Sri Lanka.",
       },
       {
         year: "2020",
-        discription: "‘OBLAK Performances, Objects & Vulnerability, via zoom app, online, performed at Borella Junction.",
+        discription: "'OBLAK Performances, Objects & Vulnerability, via zoom app, online, performed at Borella Junction.",
       },
       {
         year: "2019",
-        discription: "‘Texting Being’, Theertha performance platform-2019, at Theertha, Borella, Sri Lanka.",
+        discription: "'Texting Being', Theertha performance platform-2019, at Theertha, Borella, Sri Lanka.",
       },
       {
         year: "2019",
-        discription: "‘A cross section’, group art exhibition of Sri Lankan artists, Jaleh Gallery, Tehran, Iran 2019",
+        discription: "'A cross section', group art exhibition of Sri Lankan artists, Jaleh Gallery, Tehran, Iran 2019",
       },
       {
         year: "2019",
@@ -63,11 +63,11 @@ const artistCv = [
       },
       {
         year: "2019",
-        discription: "‘Texting Being’, Theertha performance platform-2019, at Theertha, Borella, Sri Lanka.",
+        discription: "'Texting Being', Theertha performance platform-2019, at Theertha, Borella, Sri Lanka.",
       },
       {
         year: "2017",
-        discription: "‘A TALE OF TWO CITIES | INDIA AND SRI LANKA’, Theertha Red Dot Gallery, Colombo, Sri Lanka.",
+        discription: "'A TALE OF TWO CITIES | INDIA AND SRI LANKA', Theertha Red Dot Gallery, Colombo, Sri Lanka.",
       },
       {
         year: "2017",
@@ -75,7 +75,7 @@ const artistCv = [
       },
       {
         year: "2017",
-        discription: "‘Texting Being’, Theertha performance platform-2019, at Theertha, Borella, Sri Lanka.",
+        discription: "'Texting Being', Theertha performance platform-2019, at Theertha, Borella, Sri Lanka.",
       },
       {
         year: "2017",
@@ -91,15 +91,15 @@ const artistCv = [
       },
       {
         year: "2017",
-        discription: "‘A TALE OF TWO CITIES | INDIA AND SRI LANKA’ Indira Gandhi National Center for the Arts (IGNCA), Delhi, India.",
+        discription: "'A TALE OF TWO CITIES | INDIA AND SRI LANKA' Indira Gandhi National Center for the Arts (IGNCA), Delhi, India.",
       },
       {
         year: "2016",
-        discription: "‘A TALE OF TWO CITIES | INDIA AND SRI LANKA’ Serendipity Arts Festival, Adil Shah Palace, Goa, India.",
+        discription: "'A TALE OF TWO CITIES | INDIA AND SRI LANKA' Serendipity Arts Festival, Adil Shah Palace, Goa, India.",
       },
       {
         year: "2016",
-        discription: "‘Texting Being’, Theertha performance platform-2019, at Theertha, Borella, Sri Lanka.",
+        discription: "'Texting Being', Theertha performance platform-2019, at Theertha, Borella, Sri Lanka.",
       },
       {
         year: "2016",
@@ -226,7 +226,7 @@ const artistCv = [
       },
       {
         year: "2005",
-        discription: "'Aham Puram' by Theerha International Artists’ Collective, Public Library, Jaffna, Sri Lanka.",
+        discription: "'Aham Puram' by Theerha International Artists' Collective, Public Library, Jaffna, Sri Lanka.",
       },
       {
         year: "2004",
@@ -246,11 +246,11 @@ const artistCv = [
       },
       {
         year: "2001",
-        discription: "1st Theertha International Artists ‘Workshop’, Gallery 706, Colombo, Sri Lanka",
+        discription: "1st Theertha International Artists 'Workshop', Gallery 706, Colombo, Sri Lanka",
       },
       {
         year: "2000",
-        discription: "4th Art Link International Artists ‘Workshop’, Gallery 706, Colombo, Sri Lanka",
+        discription: "4th Art Link International Artists 'Workshop', Gallery 706, Colombo, Sri Lanka",
       },
       {
         year: "2000",
@@ -266,7 +266,7 @@ const artistCv = [
       },
       {
         year: "1998",
-        discription: "“New Directions”, Mount Castle, Gallery Colombo, Sri Lanka.",
+        discription: "'New Directions', Mount Castle, Gallery Colombo, Sri Lanka.",
       },
     ],
   },
