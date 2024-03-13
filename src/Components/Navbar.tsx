@@ -14,7 +14,7 @@ const Navbar = (props: Props) => {
   const [nav, setNav] = useState(false);
   const HandleClick = () => setNav(!nav);
 
-  const isTransparentNavbarPage = router.pathname === '/preformances';
+  const isTransparentNavbarPage = router.pathname === '/performances';
   console.log('isTransparentNavbarPage', isTransparentNavbarPage);
 
   const navbarClassName = isTransparentNavbarPage ? 'bg-transparent' : 'bg-white dark:bg-black';
