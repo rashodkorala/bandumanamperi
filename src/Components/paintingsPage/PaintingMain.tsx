@@ -1,18 +1,18 @@
 import React, { useCallback, useEffect, useState } from "react";
 
-import Slider from "../subComponents/imageSlideShow/Slider";
-import { viewAllArtworks, viewArtworksByType } from "../../Controller/artworkController";
+import { viewArtworksByType } from "../../Controller/artworkController";
 
 import useEmblaCarousel from 'embla-carousel-react'
-import Image from "next/image";
-
 import Autoplay from 'embla-carousel-autoplay'
+
+import Image from "next/image";
 
 import img1 from '@/public/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg'
 import img2 from '@/public/Assets/paintings/thousondEggs.jpg'
 import img3 from '@/public/Assets/Preformances/IronMan.jpg'
 import img4 from '@/public/Assets/Preformances/Bandaged_Body_1.jpg'
 import img5 from '@/public/Assets/installations_and_Sculptures/Numbed.jpg'
+
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 
@@ -63,7 +63,7 @@ const PaintingMain = (props: Props) => {
           and depth of Bandu&apos;s art.
         </p>
       </div>
-      <div className="embla">
+      <div className="embla w-full max-w-[1000px]">
           <div className="embla__viewport" ref={emblaRef}>
             <div className="embla__container">
               {slides.map((slide, index) => (

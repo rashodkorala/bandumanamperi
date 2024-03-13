@@ -1,12 +1,12 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback} from "react";
+
 import Link from "next/link";
-import { IoIosArrowDropleft,IoIosArrowDropright } from "react-icons/io";
-
-
-import useEmblaCarousel from 'embla-carousel-react'
 import Image from "next/image";
 
 import Autoplay from 'embla-carousel-autoplay'
+import useEmblaCarousel from 'embla-carousel-react'
+
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 import img1 from '@/public/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg'
 import img2 from '@/public/Assets/paintings/thousondEggs.jpg'
@@ -16,7 +16,7 @@ import img5 from '@/public/Assets/installations_and_Sculptures/Numbed.jpg'
 
 type Props = {};
 const Work = (props: Props) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true,}, [Autoplay()])
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, }, [Autoplay()])
 
 
   const scrollPrev = useCallback(() => {
@@ -47,7 +47,7 @@ const Work = (props: Props) => {
             Work
           </h1>
         </div>
-        <div className="embla">
+        <div className="embla w-full max-w-[1000px]">
           <div className="embla__viewport" ref={emblaRef}>
             <div className="embla__container">
               {slides.map((slide, index) => (
