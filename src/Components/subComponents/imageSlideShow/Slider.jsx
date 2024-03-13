@@ -1,3 +1,7 @@
+//discontinued
+//This component is not used in the project. It was created to be used in the home page but was replaced by the ImageSlideShow component.
+
+//This component is a slider that displays images. It has a left and right arrow to navigate through the images and a dot for each image to navigate to a specific image. It also has a hover effect that displays the left and right arrows when the mouse is over the slider.
 import React, { useState, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { BsDot } from "react-icons/bs";
@@ -59,3 +63,4 @@ const Slider = ({ hoveredSlideIndex, setHoveredSlideIndex, slides }) => {
 };
 
 export default Slider;
+
