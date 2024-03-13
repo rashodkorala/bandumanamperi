@@ -11,7 +11,7 @@ const NavBar = (props: Props) => {
        try{
         logout().then((res) => {
             if (res) {
-                router.push('/login');
+                router.push('/auth');
             }
         }
         );

@@ -23,11 +23,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
     useEffect(() => {
         auth.onAuthStateChanged((user) => {
-            if (!user && router.asPath !== '/login' && router.asPath !== '/protectedPage') {
+            if (!user && router.asPath !== '/auth' && router.asPath !== '/protectedPage') {
                 router.push('/protectedPage');
             }
             if (!user && router.asPath == '/') {
-                router.push('/login');
+                router.push('/auth');
             }
            
         }
@@ -36,8 +36,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     , [router]);
 
 
-  const showNavBar = router.pathname !== '/login' && router.pathname !== '/protectedPage';
-  const showFooter = router.pathname !== '/login' && router.pathname !== '/protectedPage';
+  const showNavBar = router.pathname !== '/auth' && router.pathname !== '/protectedPage';
+  const showFooter = router.pathname !== '/auth' && router.pathname !== '/protectedPage';
 
   if (loading || showLoading) {
     return (
