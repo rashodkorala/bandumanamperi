@@ -6,19 +6,6 @@ import { auth } from '@/utils/firebase-config';
 const DashboardMain: React.FC = () => {
     const router = useRouter();
     
-
-    const [showPopup, setShowPopup] = useState(false); // State to manage popup visibility
-
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (!user) {
-                router.push('/login');
-            }
-        });
-
-        return () => unsubscribe();
-    }, [router]);
-
     const uploadMeida = () => {
        router.push('/uploadMedia');
     };
