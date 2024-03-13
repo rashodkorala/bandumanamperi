@@ -1,5 +1,3 @@
-// components/Layout.tsx
-
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -16,30 +14,24 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoading(false); // After 2 seconds, hide the loading screen
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer); // Clear the timer when component unmounts
   }, []);
 
-    useEffect(() => {
-        auth.onAuthStateChanged((user) => {
-            if (!user && router.asPath !== '/auth' && router.asPath !== '/protectedPage') {
-                router.push('/protectedPage');
-            }
-            if (!user && router.asPath == '/') {
-                router.push('/auth');
-            }
-           
-        }
-        );
+  useEffect(() => {
+    if (!loading) {
+      // If user is not logged in and tries to access protectedPage, redirect to auth page
+      if (!user && router.pathname === '/protectedPage') {
+        router.push('/auth');
+      }
     }
-    , [router]);
-
+  }, [loading, user, router]);
 
   const showNavBar = router.pathname !== '/auth' && router.pathname !== '/protectedPage';
   const showFooter = router.pathname !== '/auth' && router.pathname !== '/protectedPage';
 
-  if (loading || showLoading) {
+  if (showLoading) {
     return (
       <div className="flex items-center justify-center h-screen">
         <div className="text-2xl font-bold">Loading...</div>
