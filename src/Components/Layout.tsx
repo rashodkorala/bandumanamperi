@@ -33,8 +33,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   , [router]);
 
   
-  const showNavBar = router.pathname !== '/login' && router.pathname !== '/protectedPage';
-  const showFooter = router.pathname !== '/login' && router.pathname !== '/protectedPage';
+  const showNavBar = router.pathname !== '/auth';
+  const showFooter = router.pathname !== '/auth';
 
   if (showLoading) {
     return (
