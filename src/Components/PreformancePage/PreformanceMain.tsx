@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { TailSpin } from 'react-loader-spinner';
+import React from 'react';
 
 function PreformanceMain() {
  
