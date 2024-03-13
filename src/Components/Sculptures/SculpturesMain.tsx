@@ -47,11 +47,11 @@ const SculpturesMain = (props: Props) => {
     }
   };
   return (
-    <div className="w-full flex flex-col md:pt-16 max-w-[2000px] mx-auto justify-center items-center">
-      <div className="p-4 flex flex-col md:flex-row justify-center items-center">
-        <div className="p-4 flex flex-col">
+    <div className="w-full min-h-screen lg:mt-[60px] xl:mt-[120px]">
+      <div className="p-4 w-full h-full flex flex-col md:flex-row justify-center items-center">
+        <div className="p-4 w-full max-w-[1000px]">
           <h1 className="text-3xl xl:text-[50px] text-left font-bold leading-10">Sculptures and Installations</h1>
-          <p className="py-6 text-[14px] xsm:text-md xl:text-xl text-left font-light max-w-[1200px]">
+          <p className="py-6 text-[14px] xsm:text-md xl:text-xl text-left font-light">
             Bandu Manamperi&apos;s artistic work delves deeply into the complex and multifaceted issues surrounding the commercialization
             and commodification of cultural symbols in Sri Lankan society. Through his sculptures and installations, he confronts and
             challenges the ways in which cultural heritage and identity are often reduced to mere commodities in a market-driven economy.
@@ -62,7 +62,7 @@ const SculpturesMain = (props: Props) => {
             deeper understanding of the complexities and challenges facing contemporary Sri Lankan society.
           </p>
         </div>
-        <div className="embla w-full max-w-[1000px]">
+        <div className="embla w-full md:w-[700px] xl:w-[1000px]">
           <div className="embla__viewport" ref={emblaRef}>
             <div className="embla__container">
               {slides.map((slide, index) => (
@@ -70,7 +70,7 @@ const SculpturesMain = (props: Props) => {
                   <Image
                     src={slide.url}
                     alt="image"
-                    className="w-full max-w-[1000px] rounded-[25px] object-contain"
+                    className="w-full md:w-[700px] xl:w-[1000px] rounded-[25px] object-contain"
                   />
                 </div>
               ))}
