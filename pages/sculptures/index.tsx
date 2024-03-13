@@ -1,4 +1,4 @@
-import SculpturesMain from "../src/Components/Sculptures/SculpturesMain";
+import SculpturesMain from "../../src/Components/Sculptures/SculpturesMain";
 import React from "react";
 export default function Sculptures() {
   return (

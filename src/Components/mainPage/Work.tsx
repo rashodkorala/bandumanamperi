@@ -13,9 +13,12 @@ import img2 from '@/public/Assets/paintings/thousondEggs.jpg'
 import img3 from '@/public/Assets/Preformances/IronMan.jpg'
 import img4 from '@/public/Assets/Preformances/Bandaged_Body_1.jpg'
 import img5 from '@/public/Assets/installations_and_Sculptures/Numbed.jpg'
+import { useRouter } from "next/router";
 
 type Props = {};
 const Work = (props: Props) => {
+
+  const router=useRouter();
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, }, [Autoplay()])
 
 
@@ -68,21 +71,15 @@ const Work = (props: Props) => {
         </div>
 
         <div className="py-6 p-6 flex flex-col md:grid md:grid-flow-col md:grid-cols-3 gap-3">
-          <button className="rounded-[25px] p-3">
-            <Link href="/paintings">Paintings and Drawings</Link>
-          </button>
-          <button
-            className="rounded-[25px] p-3"
-
-          >
-            <Link href="/preformances">Preformances</Link>
-          </button>
-          <button
-            className="rounded-[25px] p-3"
-
-          >
-            <Link href="/sculptures">Sculptures and Installations</Link>
-          </button>
+        <button className="rounded-[25px] p-3" onClick={() => router.push('/paintings')}>
+          Paintings and Drawings
+        </button>
+        <button className="rounded-[25px] p-3"  onClick={() => router.push('/performances')}>
+          Performances
+        </button>
+        <button className="rounded-[25px] p-3"  onClick={() => router.push('/sculptures')}>
+          Sculptures and Installations
+        </button>
         </div>
       </div>
     </div>

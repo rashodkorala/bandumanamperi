@@ -1,5 +1,5 @@
 import React from "react";
-import PaintingsMain from "../src/Components/paintingsPage/PaintingMain";
+import PaintingsMain from "../../src/Components/paintingsPage/PaintingMain";
 
 export default function Paintings() {
   return (

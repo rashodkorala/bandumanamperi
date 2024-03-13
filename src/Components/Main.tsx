@@ -11,7 +11,7 @@ const Main = () => {
     // Simulate a loading process, or replace with actual loading logic
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Adjust time as needed
+    }, 1000); // Adjust time as needed
 
     return () => clearTimeout(timer);
   }, []);
