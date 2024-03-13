@@ -1,49 +1,45 @@
-import React, { useState } from "react";
-import { Link as Links } from "react-scroll";
+import React, { useCallback, useState } from "react";
 import Link from "next/link";
-import Slider from "./../subComponents/imageSlideShow/Slider";
-import { useRouter } from "next/router";
+import { IoIosArrowDropleft,IoIosArrowDropright } from "react-icons/io";
+
+
+import useEmblaCarousel from 'embla-carousel-react'
+import Image from "next/image";
+
+import Autoplay from 'embla-carousel-autoplay'
+
+import img1 from '@/public/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg'
+import img2 from '@/public/Assets/paintings/thousondEggs.jpg'
+import img3 from '@/public/Assets/Preformances/IronMan.jpg'
+import img4 from '@/public/Assets/Preformances/Bandaged_Body_1.jpg'
+import img5 from '@/public/Assets/installations_and_Sculptures/Numbed.jpg'
 
 type Props = {};
 const Work = (props: Props) => {
-  const router = useRouter();
+  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true,}, [Autoplay()])
 
-  const handlePaintingsClick = () => {
-    router.push("/paintings");
-  };
 
-  const handlePerformancesClick = () => {
-    router.push("/preformances");
-  };
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
 
-  const handleSculpturesClick = () => {
-    router.push("/sculptures");
-  };
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
 
   const slides = [
-    {
-      url: "/Assets/installations_and_Sculptures/Instant_Nirvana_Private_Limited_4.jpg",
-    },
-    {
-      url: "/Assets/paintings/thousondEggs.jpg",
-    },
-    {
-      url: "/Assets/Preformances/IronMan.jpg",
-    },
+    { url: img1 },
+    { url: img2 },
+    { url: img3 },
+    { url: img4 },
+    { url: img5 },
+  ]
 
-    {
-      url: "/Assets/Preformances/Bandaged_Body_1.jpg",
-    },
-    {
-      url: "/Assets/installations_and_Sculptures/Numbed.jpg",
-    },
-  ];
-  const [hoveredSlideIndex, setHoveredSlideIndex] = useState(0);
 
   return (
     <div
       id="work"
-      className="w-full h-full md:h-[95vh] bg-transparent snap-center snap-always p-4 flex items-center justify-center"
+      className="w-full h-full snap-center snap-always p-4 flex items-center justify-center"
     >
       <div className="max-w-[1900px] w-full h-full flex flex-col justify-center items-center xsm:px-5">
         <div className="flex w-full">
@@ -51,27 +47,39 @@ const Work = (props: Props) => {
             Work
           </h1>
         </div>
-        <div className="flex w-full">
-          <Slider
-            hoveredSlideIndex={hoveredSlideIndex}
-            setHoveredSlideIndex={setHoveredSlideIndex}
-            slides={slides}
-          />
+        <div className="embla">
+          <div className="embla__viewport" ref={emblaRef}>
+            <div className="embla__container">
+              {slides.map((slide, index) => (
+                <div className="embla__slide flex justify-center items-center" key={index}>
+                  <Image
+                    src={slide.url}
+                    alt="image"
+                    className="w-full max-w-[1000px] rounded-[25px] object-fill"
+                  />
+                </div>
+              ))}
+            </div>
+          
+          </div>
+          <button className="bg-transparent text-black dark:text-white p-3" onClick={scrollPrev}><IoIosArrowDropleft size={30}/></button>
+          <button className="bg-transparent text-black dark:text-white" onClick={scrollNext}><IoIosArrowDropright size={30}/></button>
+
         </div>
 
         <div className="py-6 p-6 flex flex-col md:grid md:grid-flow-col md:grid-cols-3 gap-3">
-          <button className="rounded-[25px] p-3" onClick={handlePaintingsClick}>
+          <button className="rounded-[25px] p-3">
             <Link href="/paintings">Paintings and Drawings</Link>
           </button>
           <button
             className="rounded-[25px] p-3"
-            onClick={handlePerformancesClick}
+
           >
             <Link href="/preformances">Preformances</Link>
           </button>
           <button
             className="rounded-[25px] p-3"
-            onClick={handleSculpturesClick}
+
           >
             <Link href="/sculptures">Sculptures and Installations</Link>
           </button>
