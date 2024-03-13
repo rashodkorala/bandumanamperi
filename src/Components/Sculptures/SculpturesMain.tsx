@@ -40,7 +40,7 @@ const SculpturesMain = (props: Props) => {
 
   const fetchArtworks = async () => {
     try {
-      const fetchedArtworks = await viewArtworksByType('Sculpture');
+      const fetchedArtworks = await viewArtworksByType('Installations');
       setArtworks(fetchedArtworks);
     } catch (error) {
       console.error('Error fetching artworks:', error);
