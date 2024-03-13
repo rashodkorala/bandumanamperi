@@ -22,26 +22,10 @@ function createImage() {
 const images = createImage();
 
 const Gallery = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Assuming the images are loaded for demonstration
-    // In a real scenario, you should check if all images are loaded
-    const timer = setTimeout(() => setIsLoading(false), 2000);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div id="gallery" className="w-full">
-      {/* Loading Screen */}
-      {isLoading && (
-        <div className="fixed inset-0 z-50 flex justify-center items-center bg-white dark:bg-black text-black dark:text-white">
-          <TailSpin color="#000" height={80} width={80} />
-        </div>
-      )}
-
-      {/* Gallery Content */}
-      {!isLoading && (
+      
         <div className="max-w-[1300px] mx-auto px-4 flex flex-col justify-center h-full text-black xsm:px-5">
           <div className="columns-3 gap-3 mx-auto space-y-3 py-28">
             {images.map((image) => (
@@ -51,7 +35,6 @@ const Gallery = () => {
             ))}
           </div>
         </div>
-      )}
     </div>
   );
 };
