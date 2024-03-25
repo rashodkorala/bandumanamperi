@@ -1,10 +1,6 @@
-// components/Layout.tsx
-
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-
 import { auth } from '@/utils/firebase-config';
-import { getAuth } from 'firebase/auth';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import { ThemeProvider } from './ThemeContext';
@@ -12,7 +8,6 @@ import { ThemeProvider } from './ThemeContext';
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   const [showLoading, setShowLoading] = useState(true);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoading(false); // After 2 seconds, hide the loading screen
@@ -21,18 +16,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return () => clearTimeout(timer); // Clear the timer when component unmounts
   }, []);
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (!user) {
-        router.push('/auth');
-      }
-    });
 
-    return () => unsubscribe();
-  }
-  , [router]);
-
-  
   const showNavBar = router.pathname !== '/auth';
   const showFooter = router.pathname !== '/auth';
 
