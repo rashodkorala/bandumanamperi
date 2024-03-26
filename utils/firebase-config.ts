@@ -4,7 +4,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage"
 
-const apikey=process.env.FIREBASE_API_KEY;
+const apikey=process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey:apikey,
