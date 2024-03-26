@@ -1,7 +1,5 @@
 // pages/_app.tsx
-
 import { AppProps } from 'next/app';
-
 import '@/styles/globals.css';
 import Layout from '@/src/Components/Layout';
 

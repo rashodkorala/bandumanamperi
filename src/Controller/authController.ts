@@ -1,26 +1,17 @@
-// authController.ts
-
+// utils/auth.ts
 import { auth } from '@/utils/firebase-config';
-import {
-  sendPasswordResetEmail,
-  signInWithEmailAndPassword,
-  signOut,
-} from 'firebase/auth';
+import { sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import admin from '@/firebaseAdmin';
 
-
-
-export const login = async (email: string, password: string) => {
+export const login = async (email: string,password: string) => {
   try {
-    await signInWithEmailAndPassword(auth, email, password);
-    return true;
-  } catch (error: any) {
-    if (error.code === 'auth/user-not-found') {
-      return 'User not found';
-    }
-    if (error.code === 'auth/invalid-credential') {
-      return 'Invalid credentials';
-    }
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+  
+    return userCredential.user;
+  } catch (error) {
+    throw new Error((error as any).message);
   }
+  
 };
 
 export const logout = async () => {
@@ -30,14 +21,28 @@ export const logout = async () => {
   } catch (error) {
     return false;
   }
+  
 };
 
-//forgetPassword
-export const forgetPassword = async (email: string) => {
-    try {
-        await sendPasswordResetEmail(auth, email);
-        return true;
-    } catch (error) {
-        return (error as any).message;
-    }
+export const forgetPassword = async (email:string) => {
+ 
+  try {
+    await sendPasswordResetEmail(auth, email);
+    return true;
+  } catch (error) {
+    return false;
+  }
+
 };
+
+export const verifyToken = async (token: string) => {
+  try {
+    const userCredential = await admin.auth().verifyIdToken(token);
+    return userCredential.user !== null;
+    
+  } catch (error) {
+    return false;
+  }
+  
+}
+

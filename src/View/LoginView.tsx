@@ -2,8 +2,6 @@
 
 import React, { useState, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
-import { login } from '@/src/Controller/authController';
-
 
 const LoginPage: React.FC = () => {
   const router = useRouter();
@@ -25,8 +23,19 @@ const LoginPage: React.FC = () => {
       return;
     }
     try {
-      await login(email, password);
-      router.push('/');
+      const loggedIn =  await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      if (loggedIn.ok) {
+        router.push('/');
+      } else {
+        const data = await loggedIn.json();
+        setError(data.message);
+      }
     }
     catch (error: any) {
       setError(error.message);
