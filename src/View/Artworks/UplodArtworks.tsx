@@ -18,7 +18,7 @@ enum MediaType {
   Installation = 'Installations',
 }
 
-const UplodMediaMain = (props: Props) => {
+const UploadArtworks = (props: Props) => {
   const [mediaType, setMediaType] = useState<MediaType>(MediaType.Painting);
   const [mediaItem, setMediaItem] = useState<MediaItem>({ name: '', date: '', description: '', files: []});
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -125,4 +125,4 @@ const UplodMediaMain = (props: Props) => {
   );
 };
 
-export default UplodMediaMain;
+export default UploadArtworks;

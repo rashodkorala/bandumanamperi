@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 import Image from 'next/image';
-import { viewAllArtworks } from '@/src/Controller/ArtworkController';
+import { fetchAllArtworks } from '@/src/Controller/ArtworkController';
+import router from 'next/router';
 
-const ViewAllMedia: React.FC = () => {
+const ViewAllArtworks: React.FC = () => {
   const [artworks, setArtworks] = useState<any[]>([]);
 
   useEffect(() => {
@@ -13,11 +14,14 @@ const ViewAllMedia: React.FC = () => {
 
   const fetchArtworks = async () => {
     try {
-      const fetchedArtworks = await viewAllArtworks();
+      const fetchedArtworks = await fetchAllArtworks();
       setArtworks(fetchedArtworks);
     } catch (error) {
       console.error('Error fetching artworks:', error);
     }
+  };
+  const viewArtworkDetail = (artworkId: string) => {
+    router.push(`/artworks/${artworkId}`);
   };
 
   return (
@@ -25,7 +29,7 @@ const ViewAllMedia: React.FC = () => {
       <h1 className="text-3xl font-semibold mb-4">All Artworks</h1>
       <div className="grid grid-cols-3 gap-8">
         {artworks.map((artwork) => (
-          <div key={artwork.id} className="border rounded-lg p-4">
+          <div key={artwork.id} className="border rounded-lg p-4" onClick={() => viewArtworkDetail(artwork.id)}>
             <h2 className="text-xl font-semibold">{artwork.name}</h2>
             <p className="text-gray-600">{artwork.date}</p>
             <p className="text-gray-700">{artwork.description}</p>
@@ -41,4 +45,4 @@ const ViewAllMedia: React.FC = () => {
   );
 };
 
-export default ViewAllMedia;
+export default ViewAllArtworks;
