@@ -1,6 +1,7 @@
 import { ref as storageRef, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc, DocumentReference,getDocs, deleteDoc, QuerySnapshot, DocumentData } from 'firebase/firestore';
 import { firestore, storage } from '@/utils/firebase-config';
+import { getAuth } from 'firebase/auth';
 
 
 interface Artwork {
@@ -14,6 +15,14 @@ interface Artwork {
 
 // Upload artwork to Firebase Storage and save metadata to Firestore
 const uploadArtwork = async (artwork: Artwork): Promise<DocumentReference | null> => {
+
+  const auth = getAuth();
+  if (!auth.currentUser) {
+
+    console.error('User is not logged in');
+    return null;
+  }
+
   try {
     const photoURLs: string[] = [];
 

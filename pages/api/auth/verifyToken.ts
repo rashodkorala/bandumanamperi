@@ -1,4 +1,3 @@
-import { verifyToken } from '@/src/Controller/authController';
 import admin from 'firebase-admin';
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -19,7 +18,8 @@ const verifyIdToken = async (req: NextApiRequest, res: NextApiResponse) => {
   }
   
   try {
-    const user = await verifyToken(token);
+    const user = await admin.auth().verifyIdToken(token);
+
     if (!user) {
       return res.status(401).json({ valid: false, error: "Token verification failed" });
     }

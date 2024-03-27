@@ -6,14 +6,13 @@ import admin from '@/firebaseAdmin';
 
 const loginHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
-    const { email, password } = req.body;
+   
+    //get token from authorization header
+    const token = req.headers.authorization?.split('Bearer ')[1];
+    // const user = await login(email, password);
 
-    const user = await login(email, password);
-
-    if (user) {
-      // Login successful, set a cookie
-        const token = await user.getIdToken();
-        
+    if (token) {
+      // Login successful, set a cookie with the token
         const istokenValid = await admin.auth().verifyIdToken(token);
     
         if (!istokenValid) {

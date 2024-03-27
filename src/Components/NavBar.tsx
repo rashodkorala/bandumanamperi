@@ -8,14 +8,11 @@ type Props = {}
 const NavBar = (props: Props) => {
     
     const handleLogout = async () => {
-      
-    const loggedOut = await fetch('/api/auth/logout', {
-      method: 'POST',
-    });
-    if (loggedOut.ok) {
-      router.push('/auth');
-    }
+    const response= await logout();
+    if (response) {
+      router.push('/login');
     };
+  }
   return (
     <div className="flex justify-between items-center py-4 px-6 border-b border-gray-200 dark:border-gray-900 bg-white dark:bg-black">
                 <h1 className="text-2xl font-semibold">Dashboard</h1>

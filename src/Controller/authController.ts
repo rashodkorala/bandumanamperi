@@ -1,13 +1,32 @@
 // utils/auth.ts
 import { auth } from '@/utils/firebase-config';
-import { sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import admin from '@/firebaseAdmin';
+import { browserLocalPersistence, sendPasswordResetEmail, setPersistence, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 
 export const login = async (email: string,password: string) => {
   try {
+    //add presistant login
+    setPersistence(auth, browserLocalPersistence);
+
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-  
-    return userCredential.user;
+    
+    if (!userCredential.user) {
+      throw new Error('User not found');
+    }
+    const token = await userCredential.user.getIdToken();
+    
+   const response = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: {
+        'authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Login failed');
+    }
+    return true;
+    
   } catch (error) {
     throw new Error((error as any).message);
   }
@@ -17,7 +36,15 @@ export const login = async (email: string,password: string) => {
 export const logout = async () => {
   try {
     await signOut(auth);
-    return true;
+    const response = await fetch('/api/auth/logout', {
+      method: 'POST',
+    });
+
+    if (response){
+     return response;
+    }
+
+    
   } catch (error) {
     return false;
   }
@@ -34,15 +61,3 @@ export const forgetPassword = async (email:string) => {
   }
 
 };
-
-export const verifyToken = async (token: string) => {
-  try {
-    const userCredential = await admin.auth().verifyIdToken(token);
-    return userCredential.user !== null;
-    
-  } catch (error) {
-    return false;
-  }
-  
-}
-
