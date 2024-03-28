@@ -1,11 +1,11 @@
-export class Artwork {
-    id?: number;
+export default class Artwork {
+    id?: string;
     name: string;
     year: number;
-    images: string[];
+    images: File[];
     description: string;
   
-    constructor(name: string, year: number, images: string[], description: string, id?: number) {
+    constructor(name: string, year: number, images: File[], description: string, id?: string) {
       this.id = id;
       this.name = name;
       this.year = year;
