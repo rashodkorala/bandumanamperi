@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { deleteArtwork, fetchArtworkById, updateArtwork } from '@/src/Controller/ArtworkController'; // Implement these
+import EditArtwork from './EditArtwork';
 
 const ArtworkDetail: React.FC = () => {
   const [artwork, setArtwork] = useState<any>(null);
@@ -44,24 +45,13 @@ const ArtworkDetail: React.FC = () => {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-semibold mb-4">{isEditing ? 'Edit Artwork' : artwork.name}</h1>
         <div>
-          <button onClick={handleEditToggle} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mr-2">{isEditing ? 'Cancel' : 'Edit'}</button>
-          <button onClick={handleDelete} className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete</button>
+          <button onClick={handleEditToggle} className="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600 mr-2">{isEditing ? 'Cancel' : 'Edit'}</button>
+          <button onClick={handleDelete} className="bg-red-500 px-4 py-2 rounded hover:bg-red-600">Delete</button>
         </div>
       </div>
       {isEditing ? (
         // Edit mode
-        <form onSubmit={(e) => {
-          e.preventDefault();
-          handleSave({
-            ...artwork,
-            // Include updated fields here
-          });
-        }}>
-          <input defaultValue={artwork.name} className="border p-2 w-full mb-4" />
-          <textarea defaultValue={artwork.description} className="border p-2 w-full mb-4" />
-          {/* Include inputs for other fields as needed */}
-          <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Save Changes</button>
-        </form>
+        <EditArtwork artwork={artwork}/>
       ) : (
         // View mode
         <div>
