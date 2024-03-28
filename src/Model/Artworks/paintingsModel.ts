@@ -1,6 +1,6 @@
 import { Artwork } from './artworkModel';
 
-export class Paintings extends Artwork {
+export default class Painting extends Artwork {
   medium: string;
   size: string;
 

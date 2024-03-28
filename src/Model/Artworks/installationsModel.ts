@@ -1,6 +1,6 @@
 import { Artwork } from './artworkModel';
 
-export class Installations extends Artwork {
+export default class installation extends Artwork {
   medium: string;
   size: string;
   location?: string;

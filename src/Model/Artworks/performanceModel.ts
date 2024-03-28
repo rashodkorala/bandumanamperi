@@ -1,6 +1,6 @@
 import { Artwork } from './artworkModel';
 
-export class Performance extends Artwork {
+export default class Performance extends Artwork {
   duration: string;
   location: string;
   performanceType: string;
